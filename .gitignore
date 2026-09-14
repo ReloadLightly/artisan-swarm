@@ -1,0 +1,33 @@
+# Local environments and build products
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+node_modules/
+
+# Secrets, account state, and unreviewed local execution data
+.env
+.env.*
+!.env.example
+.auth/
+.codex/
+.local/
+.cache/
+*.pem
+*.key
+.streamlit/secrets.toml
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Do not globally ignore results, JSON, or Markdown: reviewed research artifacts
+# and replay data are meant to be versioned. Inspect them before publication.
