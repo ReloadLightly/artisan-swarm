@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "id": "m1-hypothetical-unavailable-contribution",
+  "label": "hypothetical",
+  "title": "Hypothetical: proposed data contribution unavailable",
+  "description": "One anonymous proposed data contribution is unavailable. This is a development-team-known stress condition, not an actual withdrawal, refusal or institutional event. Unknown permissions, partner consent, funding and evaluation capacity remain unknown.",
+  "hypothetical": true,
+  "held_out": false,
+  "changes": {
+    "contribution_available": false
+  },
+  "fact_claims": {
+    "contribution_available": ["A_CONTRIBUTION_UNAVAILABLE"]
+  },
+  "claim_ids": ["A_CONTRIBUTION_UNAVAILABLE"],
+  "real_institution_attribution": null
+}
