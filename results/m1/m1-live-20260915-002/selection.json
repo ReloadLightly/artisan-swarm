@@ -1,0 +1,26 @@
+{
+  "feedback_ids": [],
+  "ranking": [
+    {
+      "actionable_unresolved_action_ids": [],
+      "candidate_id": "centralized-v1",
+      "count": 0,
+      "feedback_ids": []
+    },
+    {
+      "actionable_unresolved_action_ids": [],
+      "candidate_id": "federated-v1",
+      "count": 0,
+      "feedback_ids": []
+    },
+    {
+      "actionable_unresolved_action_ids": [],
+      "candidate_id": "project_specific-v1",
+      "count": 0,
+      "feedback_ids": []
+    }
+  ],
+  "reason": "0 distinct unresolved actions attracted actionable criticism; lexical tie-break if needed.",
+  "rule": "Count distinct blocked or conditional action IDs with actionable critic objections; descending count, then lexicographic candidate ID. No geopolitical score.",
+  "selected_id": "centralized-v1"
+}

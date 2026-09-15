@@ -1,0 +1,254 @@
+{
+  "actions": [
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "U_PARTNER_CONSENT",
+        "U_LOCAL_PERMISSION",
+        "U_POOLED_PERMISSION"
+      ],
+      "depends_on": [],
+      "description": "Draft a federated option with locally controlled processing and separately approved exchange of evaluation summaries. Specify proposed decision rights, withdrawal procedures and review responsibilities without assigning obligations to institutions. ASEAN guidance is voluntary, not processing permission.",
+      "evidence_refs": [
+        "C_ASEAN_GOVERNANCE",
+        "I_COOPERATION_DESIGN_SPACE"
+      ],
+      "fallbacks": [],
+      "id": "F01",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "coordination_authorized",
+          "reason": "Only fictional preparatory drafting is authorized."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Preparatory authorization changes.",
+        "Partner preferences or applicable requirements become established."
+      ],
+      "title": "Draft a locally controlled cooperation charter",
+      "when": {
+        "operator": "all",
+        "tests": []
+      }
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_AVAILABLE",
+        "A_COORDINATION_AUTHORIZED",
+        "U_LOCAL_PERMISSION",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "depends_on": [
+        "F01"
+      ],
+      "description": "Draft a contribution-dependent local testing protocol and provenance questionnaire without accessing the contribution. Propose language-specific evaluation criteria and a common reporting template; do not assume comparable datasets, available evaluators or suitable models.",
+      "evidence_refs": [
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [
+        {
+          "action_id": "F03",
+          "reason": "If the contribution becomes unavailable, switch to data-independent protocol design."
+        }
+      ],
+      "id": "F02",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "coordination_authorized",
+          "reason": "Protocol drafting must remain within preparatory authorization."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Contribution availability changes.",
+        "Provenance, permissions or evaluation limitations become known."
+      ],
+      "title": "Specify the contribution-dependent protocol",
+      "when": {
+        "operator": "all",
+        "tests": [
+          {
+            "equals": true,
+            "fact": "contribution_available"
+          }
+        ]
+      }
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "A_COORDINATION_AUTHORIZED",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "depends_on": [
+        "F01"
+      ],
+      "description": "Remove the unavailable contribution from the proposed scope and suspend contribution-dependent testing. Retain draft reporting interfaces, evaluator-training outlines and criteria for reviewing any future replacement. Do not assume replacement data, synthetic-data suitability, staffing or funding.",
+      "evidence_refs": [
+        "C_JP_CO_CREATION",
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [],
+      "id": "F03",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "coordination_authorized",
+          "reason": "The fallback permits drafting only, not training delivery or data acquisition."
+        }
+      ],
+      "reconsideration_triggers": [
+        "A contribution becomes available.",
+        "The remaining design work lacks a useful agreed purpose."
+      ],
+      "title": "Preserve interfaces and suspend data-dependent work",
+      "when": {
+        "operator": "all",
+        "tests": [
+          {
+            "equals": false,
+            "fact": "contribution_available"
+          }
+        ]
+      }
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_AVAILABLE",
+        "U_PARTNER_CONSENT",
+        "U_LOCAL_PERMISSION",
+        "U_POOLED_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "depends_on": [
+        "F02"
+      ],
+      "description": "Recommend, but do not authorize or perform, a bounded federated evaluation: approved local tests with only specifically approved summaries exchanged. Permission review must cover disclosure risks and relevant cross-border requirements; local retention alone is insufficient. Exclude deployment and raw-data pooling.",
+      "evidence_refs": [
+        "C_ASEAN_GOVERNANCE",
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [
+        {
+          "action_id": "F03",
+          "reason": "Contribution loss activates the independently guarded design-only fallback."
+        },
+        {
+          "action_id": "F05",
+          "reason": "Unresolved readiness leaves only a documentary review supported."
+        }
+      ],
+      "id": "F04",
+      "kind": "execution",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "partner_consent",
+          "reason": "Named partners must consent to the specific scope and responsibilities."
+        },
+        {
+          "equals": true,
+          "fact": "local_processing_permission",
+          "reason": "Each proposed local use requires specific rights and permission."
+        },
+        {
+          "equals": true,
+          "fact": "pooled_processing_permission",
+          "reason": "Any proposed cross-border summary exchange requires an applicable permission determination; summaries are not automatically exempt."
+        },
+        {
+          "equals": true,
+          "fact": "funding_confirmed",
+          "reason": "Budget, staffing and compute must be confirmed for the bounded work."
+        },
+        {
+          "equals": true,
+          "fact": "evaluation_capacity",
+          "reason": "Named evaluators, materials, thresholds and independent assessment capacity must be established."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Any prerequisite changes or expires.",
+        "Contribution availability changes.",
+        "Proposed outputs create unreviewed disclosure risks."
+      ],
+      "title": "Conditionally recommend a bounded federated evaluation",
+      "when": {
+        "operator": "all",
+        "tests": [
+          {
+            "equals": true,
+            "fact": "contribution_available"
+          }
+        ]
+      }
+    },
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "U_PARTNER_CONSENT",
+        "U_LOCAL_PERMISSION",
+        "U_POOLED_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "depends_on": [
+        "F01"
+      ],
+      "description": "Draft a readiness register separating documented policy, scenario availability and unresolved commitments. Record which branch is applicable and which gates remain unresolved. Compare retaining federation, narrowing to project-specific work or suspension without asserting political feasibility. This is documentary proposal review, not model testing.",
+      "evidence_refs": [
+        "I_COOPERATION_DESIGN_SPACE",
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [],
+      "id": "F05",
+      "kind": "evaluation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "coordination_authorized",
+          "reason": "Only review of the proposed design is authorized."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Any case fact changes.",
+        "A proposed scope or architecture changes."
+      ],
+      "title": "Review readiness without converting unknowns into approval",
+      "when": {
+        "operator": "all",
+        "tests": []
+      }
+    }
+  ],
+  "architecture": "federated",
+  "assumption_refs": [
+    "A_CONTRIBUTION_AVAILABLE",
+    "A_CONTRIBUTION_UNAVAILABLE",
+    "A_COORDINATION_AUTHORIZED",
+    "U_PARTNER_CONSENT",
+    "U_LOCAL_PERMISSION",
+    "U_POOLED_PERMISSION",
+    "U_FUNDING",
+    "U_EVALUATION_CAPACITY"
+  ],
+  "engine_version": "m1-1",
+  "evidence_refs": [
+    "C_JP_CO_CREATION",
+    "C_ASEAN_GOVERNANCE",
+    "C_ASEAN_GENAI",
+    "I_COOPERATION_DESIGN_SPACE"
+  ],
+  "feedback_ids": [],
+  "id": "federated-v1",
+  "parent_ids": [],
+  "rationale": "Federation is a design hypothesis, not a policy-selected architecture or partner commitment. Shared protocol drafting can survive hypothetical contribution loss while data-dependent work stops. Initially, only preparatory work is supported: consent, both processing permissions, resources and evaluation capacity remain unresolved. Local control does not establish rights.",
+  "schema_version": "1.0",
+  "title": "Federated protocol design with a contribution-loss suspension branch"
+}

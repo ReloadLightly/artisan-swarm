@@ -1,0 +1,349 @@
+{
+  "actions": [
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "U_PARTNER_CONSENT",
+        "U_LOCAL_PERMISSION",
+        "U_POOLED_PERMISSION"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [],
+        "value": "true"
+      },
+      "dependencies": [],
+      "evidence_refs": [
+        "C_ASEAN_GOVERNANCE",
+        "I_COOPERATION_DESIGN_SPACE"
+      ],
+      "fallbacks": [],
+      "id": "F01",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "Only fictional preparatory drafting is authorized.",
+          "value": "true"
+        }
+      ],
+      "reasons": [
+        "All modeled guards, prerequisites, and dependencies are satisfied."
+      ],
+      "reconsideration_triggers": [
+        "Preparatory authorization changes.",
+        "Partner preferences or applicable requirements become established."
+      ],
+      "status": "supported",
+      "title": "Draft a locally controlled cooperation charter"
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_AVAILABLE",
+        "A_COORDINATION_AUTHORIZED",
+        "U_LOCAL_PERMISSION",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [
+          {
+            "actual": true,
+            "claim_refs": [
+              "A_CONTRIBUTION_AVAILABLE"
+            ],
+            "expected": true,
+            "fact": "contribution_available",
+            "value": "true"
+          }
+        ],
+        "value": "true"
+      },
+      "dependencies": [
+        {
+          "action_id": "F01",
+          "status": "supported"
+        }
+      ],
+      "evidence_refs": [
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [
+        {
+          "action_id": "F03",
+          "applicable": false,
+          "reason": "If the contribution becomes unavailable, switch to data-independent protocol design.",
+          "status": "inactive"
+        }
+      ],
+      "id": "F02",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "Protocol drafting must remain within preparatory authorization.",
+          "value": "true"
+        }
+      ],
+      "reasons": [
+        "All modeled guards, prerequisites, and dependencies are satisfied."
+      ],
+      "reconsideration_triggers": [
+        "Contribution availability changes.",
+        "Provenance, permissions or evaluation limitations become known."
+      ],
+      "status": "supported",
+      "title": "Specify the contribution-dependent protocol"
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "A_COORDINATION_AUTHORIZED",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [
+          {
+            "actual": true,
+            "claim_refs": [
+              "A_CONTRIBUTION_AVAILABLE"
+            ],
+            "expected": false,
+            "fact": "contribution_available",
+            "value": "false"
+          }
+        ],
+        "value": "false"
+      },
+      "dependencies": [
+        {
+          "action_id": "F01",
+          "status": "supported"
+        }
+      ],
+      "evidence_refs": [
+        "C_JP_CO_CREATION",
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [],
+      "id": "F03",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "The fallback permits drafting only, not training delivery or data acquisition.",
+          "value": "true"
+        }
+      ],
+      "reasons": [
+        "Action guard is false in this case."
+      ],
+      "reconsideration_triggers": [
+        "A contribution becomes available.",
+        "The remaining design work lacks a useful agreed purpose."
+      ],
+      "status": "inactive",
+      "title": "Preserve interfaces and suspend data-dependent work"
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_AVAILABLE",
+        "U_PARTNER_CONSENT",
+        "U_LOCAL_PERMISSION",
+        "U_POOLED_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [
+          {
+            "actual": true,
+            "claim_refs": [
+              "A_CONTRIBUTION_AVAILABLE"
+            ],
+            "expected": true,
+            "fact": "contribution_available",
+            "value": "true"
+          }
+        ],
+        "value": "true"
+      },
+      "dependencies": [
+        {
+          "action_id": "F02",
+          "status": "supported"
+        }
+      ],
+      "evidence_refs": [
+        "C_ASEAN_GOVERNANCE",
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [
+        {
+          "action_id": "F03",
+          "applicable": true,
+          "reason": "Contribution loss activates the independently guarded design-only fallback.",
+          "status": "inactive"
+        },
+        {
+          "action_id": "F05",
+          "applicable": true,
+          "reason": "Unresolved readiness leaves only a documentary review supported.",
+          "status": "supported"
+        }
+      ],
+      "id": "F04",
+      "kind": "execution",
+      "prerequisites": [
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_PARTNER_CONSENT"
+          ],
+          "expected": true,
+          "fact": "partner_consent",
+          "reason": "Named partners must consent to the specific scope and responsibilities.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_LOCAL_PERMISSION"
+          ],
+          "expected": true,
+          "fact": "local_processing_permission",
+          "reason": "Each proposed local use requires specific rights and permission.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_POOLED_PERMISSION"
+          ],
+          "expected": true,
+          "fact": "pooled_processing_permission",
+          "reason": "Any proposed cross-border summary exchange requires an applicable permission determination; summaries are not automatically exempt.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_FUNDING"
+          ],
+          "expected": true,
+          "fact": "funding_confirmed",
+          "reason": "Budget, staffing and compute must be confirmed for the bounded work.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_EVALUATION_CAPACITY"
+          ],
+          "expected": true,
+          "fact": "evaluation_capacity",
+          "reason": "Named evaluators, materials, thresholds and independent assessment capacity must be established.",
+          "value": "unknown"
+        }
+      ],
+      "reasons": [
+        "Prerequisite partner_consent is unknown: Named partners must consent to the specific scope and responsibilities.",
+        "Prerequisite local_processing_permission is unknown: Each proposed local use requires specific rights and permission.",
+        "Prerequisite pooled_processing_permission is unknown: Any proposed cross-border summary exchange requires an applicable permission determination; summaries are not automatically exempt.",
+        "Prerequisite funding_confirmed is unknown: Budget, staffing and compute must be confirmed for the bounded work.",
+        "Prerequisite evaluation_capacity is unknown: Named evaluators, materials, thresholds and independent assessment capacity must be established."
+      ],
+      "reconsideration_triggers": [
+        "Any prerequisite changes or expires.",
+        "Contribution availability changes.",
+        "Proposed outputs create unreviewed disclosure risks."
+      ],
+      "status": "conditional",
+      "title": "Conditionally recommend a bounded federated evaluation"
+    },
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "U_PARTNER_CONSENT",
+        "U_LOCAL_PERMISSION",
+        "U_POOLED_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [],
+        "value": "true"
+      },
+      "dependencies": [
+        {
+          "action_id": "F01",
+          "status": "supported"
+        }
+      ],
+      "evidence_refs": [
+        "I_COOPERATION_DESIGN_SPACE",
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [],
+      "id": "F05",
+      "kind": "evaluation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "Only review of the proposed design is authorized.",
+          "value": "true"
+        }
+      ],
+      "reasons": [
+        "All modeled guards, prerequisites, and dependencies are satisfied."
+      ],
+      "reconsideration_triggers": [
+        "Any case fact changes.",
+        "A proposed scope or architecture changes."
+      ],
+      "status": "supported",
+      "title": "Review readiness without converting unknowns into approval"
+    }
+  ],
+  "case_id": "m1-japan-thailand-vietnam-local-language-ai",
+  "engine_version": "m1-1",
+  "program_id": "federated-v1",
+  "summary": {
+    "blocked": [],
+    "conditional": [
+      "F04"
+    ],
+    "inactive": [
+      "F03"
+    ],
+    "supported": [
+      "F01",
+      "F02",
+      "F05"
+    ]
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "actions": [
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "U_PARTNER_CONSENT",
+        "U_FUNDING"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [],
+        "value": "true"
+      },
+      "dependencies": [],
+      "evidence_refs": [
+        "C_JP_CO_CREATION",
+        "C_TH_CAPACITY_POLICY",
+        "C_VN_STRATEGY",
+        "I_COOPERATION_DESIGN_SPACE"
+      ],
+      "fallbacks": [],
+      "id": "ps-charter",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "Only fictional preparatory proposal drafting is authorized.",
+          "value": "true"
+        }
+      ],
+      "reasons": [
+        "All modeled guards, prerequisites, and dependencies are satisfied."
+      ],
+      "reconsideration_triggers": [
+        "Preparatory authorization changes.",
+        "A proposed project's purpose or governance scope changes."
+      ],
+      "status": "supported",
+      "title": "Draft separable project charters"
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_AVAILABLE",
+        "A_COORDINATION_AUTHORIZED",
+        "U_LOCAL_PERMISSION",
+        "U_POOLED_PERMISSION"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [
+          {
+            "actual": true,
+            "claim_refs": [
+              "A_CONTRIBUTION_AVAILABLE"
+            ],
+            "expected": true,
+            "fact": "contribution_available",
+            "value": "true"
+          }
+        ],
+        "value": "true"
+      },
+      "dependencies": [
+        {
+          "action_id": "ps-charter",
+          "status": "supported"
+        }
+      ],
+      "evidence_refs": [
+        "C_ASEAN_GOVERNANCE"
+      ],
+      "fallbacks": [
+        {
+          "action_id": "ps-rescope",
+          "applicable": false,
+          "reason": "If the contribution becomes unavailable, remove its dependent activities rather than assume a substitute.",
+          "status": "inactive"
+        }
+      ],
+      "id": "ps-contribution-annex",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "The annex is proposal design only.",
+          "value": "true"
+        }
+      ],
+      "reasons": [
+        "All modeled guards, prerequisites, and dependencies are satisfied."
+      ],
+      "reconsideration_triggers": [
+        "Contribution availability changes.",
+        "Provenance or permission evidence changes."
+      ],
+      "status": "supported",
+      "title": "Scope the contribution-dependent option"
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "A_COORDINATION_AUTHORIZED",
+        "U_PARTNER_CONSENT",
+        "U_FUNDING"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [
+          {
+            "actual": true,
+            "claim_refs": [
+              "A_CONTRIBUTION_AVAILABLE"
+            ],
+            "expected": false,
+            "fact": "contribution_available",
+            "value": "false"
+          }
+        ],
+        "value": "false"
+      },
+      "dependencies": [
+        {
+          "action_id": "ps-charter",
+          "status": "supported"
+        }
+      ],
+      "evidence_refs": [
+        "C_JP_CO_CREATION",
+        "C_ASEAN_GENAI",
+        "I_COOPERATION_DESIGN_SPACE"
+      ],
+      "fallbacks": [],
+      "id": "ps-rescope",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "Continuation covers document preparation only, not workshops or partner activity.",
+          "value": "true"
+        }
+      ],
+      "reasons": [
+        "Action guard is false in this case."
+      ],
+      "reconsideration_triggers": [
+        "Contribution availability changes.",
+        "A replacement contribution is proposed; its rights and suitability require fresh review."
+      ],
+      "status": "inactive",
+      "title": "Preserve preparation while suspending data-dependent work"
+    },
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "U_EVALUATION_CAPACITY",
+        "U_FUNDING",
+        "U_PARTNER_CONSENT"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [],
+        "value": "true"
+      },
+      "dependencies": [
+        {
+          "action_id": "ps-charter",
+          "status": "supported"
+        }
+      ],
+      "evidence_refs": [
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [],
+      "id": "ps-evaluation-spec",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "Drafting criteria does not require or establish operational evaluation capacity.",
+          "value": "true"
+        }
+      ],
+      "reasons": [
+        "All modeled guards, prerequisites, and dependencies are satisfied."
+      ],
+      "reconsideration_triggers": [
+        "Project scope changes.",
+        "Named evaluators, materials or proposed thresholds become available."
+      ],
+      "status": "supported",
+      "title": "Specify evaluation separately for each project"
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_AVAILABLE",
+        "A_COORDINATION_AUTHORIZED",
+        "U_PARTNER_CONSENT",
+        "U_LOCAL_PERMISSION",
+        "U_POOLED_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [
+          {
+            "actual": true,
+            "claim_refs": [
+              "A_CONTRIBUTION_AVAILABLE"
+            ],
+            "expected": true,
+            "fact": "contribution_available",
+            "value": "true"
+          }
+        ],
+        "value": "true"
+      },
+      "dependencies": [
+        {
+          "action_id": "ps-contribution-annex",
+          "status": "supported"
+        },
+        {
+          "action_id": "ps-evaluation-spec",
+          "status": "supported"
+        }
+      ],
+      "evidence_refs": [
+        "C_ASEAN_GOVERNANCE",
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [
+        {
+          "action_id": "ps-rescope",
+          "applicable": true,
+          "reason": "Contribution loss activates the independently guarded preparation-only redesign.",
+          "status": "inactive"
+        }
+      ],
+      "id": "ps-project-readiness",
+      "kind": "evaluation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "The output remains a proposal-readiness recommendation.",
+          "value": "true"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_PARTNER_CONSENT"
+          ],
+          "expected": true,
+          "fact": "partner_consent",
+          "reason": "Named partners must confirm the specific proposed scope.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_LOCAL_PERMISSION"
+          ],
+          "expected": true,
+          "fact": "local_processing_permission",
+          "reason": "Locality does not establish data rights or processing permission.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_FUNDING"
+          ],
+          "expected": true,
+          "fact": "funding_confirmed",
+          "reason": "A project-specific budget, staffing and compute commitments must be established.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_EVALUATION_CAPACITY"
+          ],
+          "expected": true,
+          "fact": "evaluation_capacity",
+          "reason": "Agreed materials, thresholds and available qualified evaluators must be established.",
+          "value": "unknown"
+        }
+      ],
+      "reasons": [
+        "Prerequisite partner_consent is unknown: Named partners must confirm the specific proposed scope.",
+        "Prerequisite local_processing_permission is unknown: Locality does not establish data rights or processing permission.",
+        "Prerequisite funding_confirmed is unknown: A project-specific budget, staffing and compute commitments must be established.",
+        "Prerequisite evaluation_capacity is unknown: Agreed materials, thresholds and available qualified evaluators must be established."
+      ],
+      "reconsideration_triggers": [
+        "Any prerequisite changes.",
+        "Contribution becomes unavailable.",
+        "Cross-border processing or sharing is proposed."
+      ],
+      "status": "conditional",
+      "title": "Gate the contribution-dependent project recommendation"
+    }
+  ],
+  "case_id": "m1-japan-thailand-vietnam-local-language-ai",
+  "engine_version": "m1-1",
+  "program_id": "project_specific-v1",
+  "summary": {
+    "blocked": [],
+    "conditional": [
+      "ps-project-readiness"
+    ],
+    "inactive": [
+      "ps-rescope"
+    ],
+    "supported": [
+      "ps-charter",
+      "ps-contribution-annex",
+      "ps-evaluation-spec"
+    ]
+  }
+}

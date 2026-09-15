@@ -1,6 +1,6 @@
 # M1 — Build and execute the first discovery-and-repair cycle
 
-**Status at bootstrap: specified, not implemented or run.**
+**Status:** M1 executed September 15, 2026; see [actual results and qualifications](../reports/M1_RESULTS.md). This contract was specified before implementation; its requirements remain unchanged.
 
 This document is the implementation assignment for Codex. Execute it end to end, making reasonable implementation decisions without returning a plan in place of working software. Consult `AGENTS.md`, the README, and `docs/SOURCES.md`. The RSI roadmap establishes interfaces and future questions; it is not an instruction to implement later milestones now.
 

@@ -1,0 +1,42 @@
+{
+  "action_boundary": "Executable outputs recommend proposal-design actions and conditional options only. They do not authorize external action or certify political feasibility.",
+  "decision_question": "What preparatory cooperation strategy remains defensible when a proposed data contribution becomes unavailable, and which commitments must remain conditional?",
+  "description": "A development case for comparing centralized, federated and project-specific cooperation strategies. An anonymous proposed data contribution is initially available as a modeling assumption. Preparatory proposal design is allowed; real partner consent, processing permissions, resources and evaluation capacity are unresolved. No pilot, country commitment or actual data contribution is asserted.",
+  "development_case": true,
+  "dossier_version": "m1-dossier-2026-09-15-v1",
+  "fact_claims": {
+    "contribution_available": [
+      "A_CONTRIBUTION_AVAILABLE"
+    ],
+    "coordination_authorized": [
+      "A_COORDINATION_AUTHORIZED"
+    ],
+    "evaluation_capacity": [
+      "U_EVALUATION_CAPACITY"
+    ],
+    "funding_confirmed": [
+      "U_FUNDING"
+    ],
+    "local_processing_permission": [
+      "U_LOCAL_PERMISSION"
+    ],
+    "partner_consent": [
+      "U_PARTNER_CONSENT"
+    ],
+    "pooled_processing_permission": [
+      "U_POOLED_PERMISSION"
+    ]
+  },
+  "facts": {
+    "contribution_available": true,
+    "coordination_authorized": true,
+    "evaluation_capacity": null,
+    "funding_confirmed": null,
+    "local_processing_permission": null,
+    "partner_consent": null,
+    "pooled_processing_permission": null
+  },
+  "id": "m1-japan-thailand-vietnam-local-language-ai",
+  "schema_version": "1.0",
+  "title": "Proposed Japan–Thailand–Vietnam local-language AI cooperation"
+}

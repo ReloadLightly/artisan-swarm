@@ -1,0 +1,15 @@
+{
+  "criteria": [
+    "References resolve to the frozen dossier; factual assertions match source scope and locators.",
+    "Unknown consent, resources and permissions never become satisfied by prose or a branch change.",
+    "Executable prerequisites and dependencies match the stated action, including negotiation versus implementation.",
+    "Changed-case decisions respond to the unavailable contribution and explain unaffected work.",
+    "Revision answers identified criticism; preserve parent and alternatives, and state new weaknesses.",
+    "Retain or reject with concise reasons. A scope reduction or suspension can be defensible.",
+    "Software checks do not establish feasibility. Reviews are model judgments, not expert validation."
+  ],
+  "development_case": true,
+  "held_out": false,
+  "selection_rule": "Count distinct blocked or conditional action IDs with actionable critic objections; descending count, then lexicographic candidate ID. No geopolitical score.",
+  "version": "m1-evaluation-1"
+}

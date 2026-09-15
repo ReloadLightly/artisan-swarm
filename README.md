@@ -2,156 +2,141 @@
 
 ### Evolving cooperation strategies. Learning how to discover better ones.
 
-An evidence-grounded research project at the intersection of **geopolitics, swarm intelligence, evolutionary computation, and recursive self-improvement**.
+An evidence-grounded research project connecting **geopolitics, swarm intelligence, evolutionary computation, and recursive self-improvement**.
 
-**First application:** designing and revising Japan–Thailand–Vietnam AI cooperation proposals. The three-country pilot is our research scenario, not a claim that a corresponding trilateral agreement exists.
-
-> The swarm does the strategic thinking. It does not impersonate countries or turn invented geopolitical behavior into evidence.
-
-## Project status
-
-**Stage: research bootstrap; M1 implementation not yet executed.** This is a living research README, not a report of completed experiments.
-
-| Component | Current status | Evidence needed to advance |
-|---|---|---|
-| Research question and M1 contract | Specified | [M1 implementation contract](docs/MILESTONE_1.md) |
-| Evidence dossier | To build | Dated sources and claim-level provenance |
-| Executable strategy population | To build | Inspectable programs and execution traces |
-| Artifact-sharing swarm | To build | Actual worker outputs and interaction history |
-| Adaptation demonstration | Not run | Frozen parent, disruption, critique, descendant, and comparison |
-| Decision brief and local interface | To build | Exported brief and browser-verified interface |
-| Swarm-versus-baseline study | Planned after M1 | Matched-budget runs and independent assessment |
-| Engine self-improvement / RSI | Research roadmap | [Explicit stages and evidence requirements](docs/RSI_ROADMAP.md) |
+**First application:** proposed Japan–Thailand–Vietnam local-language AI cooperation. This is a research scenario, not an assertion that a trilateral pilot or agreement exists.
 
 ## Abstract
 
-Artisan Swarm investigates whether interacting language-model workers can discover, challenge, recombine, and repair cooperation strategies more effectively than matched single-agent and independent-search alternatives. Strategies are persistent artifacts combining evidence-backed arguments with executable conditional procedures. Workers coordinate through a shared archive of proposals, objections, dependencies, and revisions. Evolution operates on interpretable strategy structures rather than a fabricated scalar measure of national interest.
+Artisan Swarm turns a public-source dossier into executable conditional cooperation proposals, exposes them to criticism, and preserves model-mediated revisions with their evidence and execution traces. Milestone 1 now implements and executes this complete path: six isolated application research jobs generated three architectural alternatives, criticism, a descendant and a fresh review; offline replay reproduced eight executions without model calls.
 
-The immediate product is an inspectable decision-support application: a reader can identify what is proposed, why it might work, whose interests remain unresolved, which assumptions it requires, and how the proposal changes when a dependency fails. The long-term research program extends adaptation from strategies to the discovery engine itself. No empirical superiority or recursive self-improvement has yet been demonstrated.
+The reviewer retained a limited planning repair: the centralized descendant adds a guarded action recommending that evaluation requirements be drafted without data. The parent already allowed no-data planning. This demonstration establishes traceable program revision, not operational resilience, architectural superiority, an interaction advantage or recursive engine improvement.
 
-## 1. Research problem
+**Read the [decision brief](reports/M1_DECISION_BRIEF.md), [results and checks](reports/M1_RESULTS.md), or [handoff](docs/HANDOFF.md).**
 
-**Can a small society of AI workers produce more defensible, adaptable cooperation proposals than one strong agent using comparable evidence and computational resources?**
+## 1. Research question
 
-Our starting policy context is Japan's proposed ASEAN AI co-creation initiative. Japan's account of the October 26, 2025 ASEAN–Japan summit describes model development, human-resource development, and co-created solutions [1]. That supports the relevance of the topic; it does not establish particular partners' capacities, funding, consent, or implementation commitments.
+**Can interacting AI workers produce more defensible, adaptable cooperation proposals than one strong agent with comparable evidence and computational resources?**
 
-The M1 decision problem is:
+Japan's October 2025 ASEAN–Japan summit account describes a proposed AI co-creation initiative involving model development, skills and co-created solutions [1]. That establishes a policy anchor, not specific partners' consent, funding or capacity. The frozen dossier also represents ASEAN, Thai and Vietnamese institutional perspectives, including Vietnam's August 2026 strategy announcement. Claims describe official statements and reported capabilities within their source scope; they do not establish pilot readiness.
 
-> How could Japan, Thailand, and Vietnam structure a local-language AI collaboration so that useful work remains possible when one proposed data contribution becomes unavailable?
+The M1 decision question is: **what remains defensible when an anonymous proposed data contribution becomes unavailable?** This disruption was known during development and is explicitly hypothetical, not a held-out test or a real institutional refusal.
 
-The unavailable contribution is an **explicit hypothetical disruption**, not an assertion about any real institution.
+## 2. Foundations
 
-## 2. Intellectual foundations
+Leonard's architect–artisan distinction motivates adaptation under unsettled conditions [2]. Structural-realist questions guide scrutiny of dependence, bargaining position, unequal capabilities and unresolved interests; they are analytical lenses, not simulated national personalities.
 
-Leonard's architect–artisan distinction motivates inquiry into adaptation under unsettled conditions [2]. It is not a conclusion that decentralized arrangements are always preferable. Structural-realist questions guide scrutiny of dependence, bargaining position, unequal capabilities, and conflicting interests; these are analytical lenses, not fixed behavioral laws encoded as national personalities.
+Swarm-inspired discovery, recruitment and inhibitory feedback motivate artifact-based coordination [3]. GEPA motivates explicit natural-language criticism as an input to revision [4]. M1 adapts these ideas rather than reproducing those methods or establishing their effectiveness in policy design. Centralized, federated and project-specific arrangements all remain eligible alternatives.
 
-Swarm-inspired coordination draws on discovery, recruitment, abandonment, and inhibitory feedback [3]. In this project, recruitment means allocating investigation to an artifact, not voting a claim into truth. GEPA provides a methodological reference for using explicit natural-language feedback to guide evolutionary revision [4]. We are adapting ideas, not claiming a faithful reproduction of either method.
-
-**Centralized, federated, and project-specific arrangements must all be allowed to remain defensible.** Disagreement and abstention are valid outputs.
-
-## 3. Proposed system
+## 3. Method
 
 ```text
-Dated evidence dossier + explicit assumptions
-                    |
-         Independent strategy discovery
-                    |
-   Shared archive: programs, claims, objections
-                    |
-  Investigation -> criticism -> variation -> validation
-                    |
-     Retained alternatives + revision lineage
-                    |
-     Executable strategies + decision brief + UI
+Frozen sources + typed claims + scenario assumptions
+                       ↓
+Three independent discovery contexts → archived strategy programs
+                       ↓
+Initial execution → hypothetical disruption → changed execution
+                       ↓
+Cross-candidate criticism → deterministic recruitment → model revision
+                       ↓
+Fresh review + preserved alternatives → brief + local UI + offline replay
 ```
 
-The evolving object is a **strategy program**: a small, typed decision structure describing actions, prerequisites, dependencies, reconsideration triggers, and fallbacks. It can be executed without allowing model-generated arbitrary code to access the host machine.
+Programs use a constrained JSON representation and the Python interface `propose_strategy(case_state, strategy_program)`. Named boolean facts support true, false and unknown conditions. Guards, prerequisites and dependency graphs determine whether an action is supported, conditional, blocked or inactive. Strings never execute as Python or shell code. Supported means recommended under modeled conditions, not that an external action happened.
 
-```python
-propose_strategy(case_state, strategy_program) -> DecisionProposal
-```
+The dossier distinguishes documented fact, interpretation, assumption and unknown. Data availability and authorization to draft a proposal are scenario assumptions. Real partner consent, local and pooled processing permissions, funding and evaluation capacity remain unknown. A [model semantic spot-check](docs/EVIDENCE_REVIEW.md) is separate from source-ID validation and is not independent expert review.
 
-The result should explain the proposed action, supporting evidence, relevant assumptions, outstanding questions, and the conditions under which the action should change. Source metadata and evaluation rules do not evolve alongside a candidate to make it appear successful.
+Application workers use **`gpt-6-astra`, medium reasoning**, through the installed ChatGPT-authenticated Codex CLI. Each receives a fresh, isolated context; discovery jobs do not see one another's outputs. The development session retained **Astra Ultra** with native helpers. Development helpers are not counted as research workers. See [runtime, isolation and accounting](docs/RUNTIME.md).
 
-A shared workspace alone is not proof of swarm intelligence. M1 must expose actual independent worker outputs, artifact references, a consequential critique, and the resulting program revision.
+## 4. Experiment and status
 
-## 4. Milestone 1: one complete discovery-and-repair cycle
+**M1 engineering demonstration: completed on September 15, 2026.** The [implementation contract](docs/MILESTONE_1.md) remains the evaluation boundary.
 
-M1 builds and executes a vertical slice, not just a framework:
-
-| Step | Required artifact |
-|---|---|
-| Assemble one small public-source dossier | Claim ledger separating fact, interpretation, assumption, and unknown |
-| Generate three distinct starting approaches | Centralized, federated, and project-specific strategy programs |
-| Execute and preserve their initial decisions | Immutable candidate snapshots and dependency traces |
-| Introduce the data-contribution disruption | Explicit scenario change, separately labeled from evidence |
-| Critique and evolve at least one candidate | Recorded worker feedback, parent–child relationship, and semantic diff |
-| Inspect the revised decision | Before/after comparison, remaining weaknesses, and alternatives |
-| Deliver the application | Local interface, replayable run, and an evidence-linked decision brief |
-
-**M1 succeeds as an engineering demonstration when this full path works and its provenance is inspectable.** It does not establish geopolitical effectiveness, generalizable superiority of swarms, or RSI.
-
-See [the complete M1 contract and Codex task](docs/MILESTONE_1.md). Agents should read [AGENTS.md](AGENTS.md) before implementation.
-
-## 5. Evaluation and research design
-
-We separate three levels of evidence:
-
-| Level | What can be assessed | What it does not establish |
+| Component | Actual result | Inspectable evidence |
 |---|---|---|
-| Software correctness | Valid references, explicit unknowns, consistent dependencies, correct branching | Real-world feasibility |
-| Decision-support quality | Grounded arguments, distinct alternatives, useful trade-offs, targeted revisions | Partner consent or implementation success |
-| Real-world effectiveness | Practitioner assessment and, eventually, implementation evidence | Something an LLM consensus can certify |
+| Public-source dossier | 6 sources; 16 typed claims | [Dossier](data/m1/dossier.json), [source review](docs/EVIDENCE_REVIEW.md) |
+| Independent discovery | 3 live starting programs | [Candidates](results/m1/m1-live-20260915-002/candidates/) |
+| Criticism and recruitment | 4 model objections; all allocation counts tied at zero | [Criticism](results/m1/m1-live-20260915-002/criticism.json), [selection](results/m1/m1-live-20260915-002/selection.json) |
+| Model-mediated revision | 1 preserved descendant, linked to objection O1 | [Revision](results/m1/m1-live-20260915-002/revision.json), [lineage](results/m1/m1-live-20260915-002/lineage.json) |
+| Fresh review | Retain; limited planning repair, a model judgment | [Review](results/m1/m1-live-20260915-002/review.json) |
+| Execution and replay | 4 programs × 2 states; replay passed with zero calls | [Executions](results/m1/m1-live-20260915-002/executions/), [replay](results/m1/m1-live-20260915-002/replay.json) |
+| Local application | Browser-verified scenario, evidence, diff, brief and replay | [UI implementation](src/artisan_swarm/ui.py), [verification report](reports/M1_RESULTS.md) |
+| Baselines / RSI | Planned; not demonstrated | [Roadmap](docs/RSI_ROADMAP.md) |
 
-After M1, compare a strong single agent, isolated multi-start search, and the artifact-sharing swarm with comparable evidence access and accounted generation, criticism, selection, and review costs. M1's known disruption is a development example, not a held-out test. Later evaluation must separate development from reserved cases and report contamination or budget mismatches.
+The first launch failed twice because the provider rejected the `uniqueItems` output-schema keyword. Those failures are [preserved](results/m1/m1-live-20260915-001/manifest.json). The provider schema projection was repaired while local uniqueness validation stayed intact. No valid discovery output was discarded.
 
-Numbers describe observable quantities such as calls, tokens, latency, test outcomes, and reviewer judgments. They are not a synthetic geopolitical utility function. A model's confidence is not a calibrated probability. Missing cost or usage data remain unknown rather than zero.
+The [completed run manifest](results/m1/m1-live-20260915-002/manifest.json) records **6 logical jobs, 6 CLI invocations and 6 completed turns**, with **99,964 input tokens and 11,367 output tokens** observed. There were 8 CLI invocations across both launches. The two failed setup attempts have unknown usage. Exact provider request/retry counts and actual monetary cost are unknown; no separately billed API fallback was used.
 
-## 6. Path toward recursive self-improvement
+## 5. Results: concrete before / after
 
-The ambition is to progressively improve both **the strategies** and **the machinery that discovers them**.
+The critic identified a mismatch between inactive contribution-dependent actions and their advisory fallback annotations. The allocator counted objections on blocked or conditional actions; all scores were zero because the objections targeted inactive or supported actions. **Centralized selection therefore came solely from the lexical tie-break**, not a finding that centralization was better.
+
+| Property | Parent `centralized-v1` | Descendant `centralized-v1-r1` |
+|---|---|---|
+| Response to unavailable data | Independently guarded suspension; evaluation planning mentioned in its prose | Preserves suspension and adds a separately guarded evaluation-requirements drafting action |
+| New action's logic | No separate action | `contribution_available == false`; requires `coordination_authorized == true`; depends on `central-suspend` |
+| Changed-case supported actions | 3 preparatory recommendations | 4 preparatory recommendations |
+| Data-dependent options | Pool design, pilot and assessment inactive | Same three remain inactive |
+| Operational unknowns | Consent, both permissions, funding, evaluation capacity | All five remain unknown |
+
+The worker removed misleading fallback links and added `central-no-data-evaluation-design`. Its output is an executable **recommendation to draft** requirements; the system did not author an evaluation matrix, run an assessment or acquire data. The [behavior comparison](results/m1/m1-live-20260915-002/behavior_comparison.json) confirms the additional action independently of descriptive edits in the [structural diff](results/m1/m1-live-20260915-002/semantic_diff.json).
+
+The fresh review calls this substantive but limited to planning. Its strongest objection is that the parent already preserved no-data specifications. The extra supported action is not a utility score or proof of improved geopolitical outcomes. All three parents and their initial decisions remain available.
+
+## 6. Limitations
+
+This is one development case and one repair cycle. Discovery already received the disruption assumption in the shared dossier; there was no held-out challenge. The same base model performed all research roles. The recruitment rule failed to distinguish the actual objections, and a more explicit planning recommendation does not demonstrate useful real-world work or operational resilience.
+
+The evidence audit and fresh review are model judgments. Permissions need qualified review; partner preferences, cost-sharing, resources and evaluation arrangements remain unresolved. There are no behavioral probabilities, fabricated national utilities, stakeholder commitments or expert endorsements. A fixed-engine baseline study is required before claiming that interaction helps. M1 does not modify the discovery engine recursively.
+
+## 7. Reproducibility
+
+Requires Python **3.10+**; the application and tests have no third-party Python dependencies. Run from the repository root in the existing WSL workspace.
+
+```bash
+# Inspect the actual preserved run at http://127.0.0.1:8765
+PYTHONPATH=src python3 -m artisan_swarm serve --run-dir results/m1/m1-live-20260915-002 --port 8765
+
+# Offline replay: zero new model calls; no authentication or web access needed
+PYTHONPATH=src python3 -m artisan_swarm replay --run-dir results/m1/m1-live-20260915-002
+
+# Evidence integrity and complete-run validation
+PYTHONPATH=src python3 -m artisan_swarm validate --run-dir results/m1/m1-live-20260915-002
+
+# Tests, including replay of the actual archive with model/process calls forbidden
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+```
+
+To deliberately start another live run, use an unused directory (or the UI's **New live run** control):
+
+```bash
+PYTHONPATH=src python3 -m artisan_swarm live --run-dir results/m1/my-new-run
+```
+
+Live execution requires the supported Codex CLI and existing ChatGPT sign-in. The same command resumes missing work in that directory; valid outputs are reused. Opening, refreshing or changing the UI scenario never calls a model. The offline replay and new-live-run controls are separate.
+
+**Executed checks:** 90 tests passed, JavaScript syntax passed, dossier validation passed, eight execution comparisons passed, and browser checks covered page loading, source/claim display, both scenarios, before/after view, review, brief download, cancellation and offline replay without console/page errors. Details and qualifications are in [M1 results](reports/M1_RESULTS.md).
+
+Public artifacts preserve prompts, final outputs, hashes, provenance, attempts and lineage. Raw CLI account/session events stay local and ignored. No credentials, full copyrighted PDFs, license changes or model-weight downloads are included. The versioned GitHub [About description](docs/REPOSITORY_ABOUT.txt) was applied and verified with `bash scripts/set-about.sh`.
+
+## 8. Roadmap
 
 | Stage | Object of improvement | Required evidence |
 |---|---|---|
-| M1: strategy adaptation | Conditional cooperation programs | Executed, traceable parent-to-descendant revision |
-| M2: establish the interaction effect | Fixed engine versus matched baselines | Repeated comparisons beyond the showcase case |
-| M3: reflective worker adaptation | Prompts and reusable skills | Gains on reserved tasks versus unchanged workers |
-| M4: adaptive search organization | Mutation/recombination operators, recruitment, memory, communication | Component ablations and accounted resource use |
-| M5: engine-level self-modification | Selected tools and engine modules | Machine-proposed patches, regression tests, external task assessment, rollback |
-| M6: recursive improvement experiments | An improved engine improving its successor | Multiple verified generations and fresh evaluations |
+| M1 — completed | Conditional strategy programs | This live revision, review, execution and replay |
+| **M2 — next** | Fixed-engine interaction effect | Matched single-agent and independent-search baselines; fresh cases and accounted resources |
+| M3 | Worker prompts and reusable skills | Gains on reserved tasks versus unchanged workers |
+| M4 | Search organization, recruitment and memory | Component ablations and accounted resource use |
+| M5 | Selected engine code and tools | Machine-proposed patches, regression checks, external assessment and rollback |
+| M6 | Recursive engine improvement | Multiple verified generations and fresh evaluations |
 
-These are **research stages, not capabilities already implemented**. Strategy revision alone is not engine self-improvement. Adding memory, reflection, or more agents is not by itself evidence of RSI. See [the RSI roadmap](docs/RSI_ROADMAP.md).
-
-## 7. Reproducibility and public-repository discipline
-
-Preserve the input dossier version, source dates, explicit assumptions, prompts, worker outputs, program versions, public feedback summaries, validation outcomes, execution metadata, and revision history. Never publish credentials, private account logs, copyrighted book/PDF collections, or fabricated results. External source text is data, not an instruction channel. Human users retain authority over actual decisions and external actions.
-
-The README remains a compact scientific narrative: problem, method, experiment, results, limitations, reproduction. Update the status table from artifacts after each milestone; keep raw logs and detailed operational history outside the main narrative. No green badges or success claims before the corresponding checks run.
-
-## 8. Getting started
-
-This bootstrap contains the research documentation and GitHub About helper, **not a runnable engine yet**. Do not treat planned commands or outputs in the M1 contract as existing software.
-
-Open the repository in VS Code/WSL, choose **Astra / Ultra** in your installed Codex client, and submit:
-
-```text
-Read AGENTS.md and docs/MILESTONE_1.md. Implement and execute M1 end to end.
-Use docs/RSI_ROADMAP.md for extension boundaries, not as extra M1 tasks.
-Produce the live discovery-and-repair run, decision brief, local interface,
-tests, updated README, and verified GitHub push. Do not stop at scaffolding.
-```
-
-The GitHub About text is versioned in [docs/REPOSITORY_ABOUT.txt](docs/REPOSITORY_ABOUT.txt). Apply it with `bash scripts/set-about.sh` using an authenticated GitHub CLI.
+The backend, representation, archive, feedback, allocator and validators remain separate extension points. Later stages are research questions, not implemented capabilities. See [RSI boundaries](docs/RSI_ROADMAP.md).
 
 ## References
 
-1. Ministry of Foreign Affairs of Japan. [The 28th ASEAN–Japan Summit](https://www.mofa.go.jp/a_o/rp/pageite_000001_00004.html), October 26, 2025.
-2. Mark Leonard. *Surviving Chaos: Geopolitics When the Rules Fail*. [Author book-talk event and overview](https://quincyinst.org/events/book-talk-surviving-chaos-geopolitics-when-the-rules-fail/), June 3, 2026. This bootstrap uses the event overview, not a claim to have reviewed the complete book.
+1. Japan MOFA. [The 28th ASEAN–Japan Summit](https://www.mofa.go.jp/a_o/rp/pageite_000001_00004.html), October 26, 2025. Complete M1 policy references, including ASEAN, NECTEC and Vietnam Government News, are in the [frozen dossier](data/m1/dossier.json).
+2. Mark Leonard. *Surviving Chaos: Geopolitics When the Rules Fail*. [Author book-talk overview](https://quincyinst.org/events/book-talk-surviving-chaos-geopolitics-when-the-rules-fail/), June 3, 2026. Motivation from the overview; the full book was not reviewed.
 3. Reina et al. [A Design Pattern for Decentralised Decision Making](https://doi.org/10.1371/journal.pone.0140950). *PLOS ONE* (2015).
 4. Agrawal et al. [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](https://arxiv.org/abs/2507.19457), 2025; revised February 2026.
 
-[Source notes and implementation references](docs/SOURCES.md)
-
----
-
-**Research aim:** make strategic reasoning cumulative, inspectable, and useful—and investigate whether the discovery system can learn to improve its own methods.
+[Bootstrap source notes](docs/SOURCES.md) · [Agent instructions](AGENTS.md) · [Runtime and provenance](docs/RUNTIME.md)

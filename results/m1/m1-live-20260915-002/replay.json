@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "artifact hashes",
+    "frozen evidence and contract",
+    "program schema/references",
+    "three distinct architectures",
+    "initial and changed execution equality",
+    "worker-output identity",
+    "recruitment selection",
+    "parent lineage",
+    "feedback references",
+    "executable semantic diff",
+    "fresh review reference"
+  ],
+  "executions_compared": 8,
+  "mode": "replay",
+  "model_calls": 0,
+  "note": "Deterministic software replay of actual saved research-worker outputs; no new inference or independent political validation.",
+  "programs": 4,
+  "replayed_at": "2026-09-15T00:18:13+00:00",
+  "status": "passed"
+}

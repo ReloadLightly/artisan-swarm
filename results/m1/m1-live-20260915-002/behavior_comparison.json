@@ -1,0 +1,94 @@
+{
+  "changed_unknowns": {
+    "evaluation_capacity": null,
+    "funding_confirmed": null,
+    "local_processing_permission": null,
+    "partner_consent": null,
+    "pooled_processing_permission": null
+  },
+  "child_changed_summary": {
+    "blocked": [],
+    "conditional": [],
+    "inactive": [
+      "central-pool-design",
+      "central-pilot-option",
+      "central-assessment-option"
+    ],
+    "supported": [
+      "central-charter",
+      "central-suspend",
+      "central-no-data-evaluation-design",
+      "central-readiness-register"
+    ]
+  },
+  "child_id": "centralized-v1-r1",
+  "control_structure_changed": true,
+  "initial_unknowns": {
+    "evaluation_capacity": null,
+    "funding_confirmed": null,
+    "local_processing_permission": null,
+    "partner_consent": null,
+    "pooled_processing_permission": null
+  },
+  "interpretation": "The new action makes previously mentioned evaluation-planning work independently inspectable and guarded. It does not implement that work, establish operational resilience, or justify an architecture preference. The preserved semantic_diff flags changed fields, including trace-only or prose-within-field edits; action eligibility and the new action are checked separately here.",
+  "newly_explicit_action": {
+    "assumption_refs": [
+      "A_COORDINATION_AUTHORIZED",
+      "A_CONTRIBUTION_UNAVAILABLE",
+      "U_EVALUATION_CAPACITY",
+      "U_FUNDING",
+      "U_PARTNER_CONSENT",
+      "U_LOCAL_PERMISSION",
+      "U_POOLED_PERMISSION"
+    ],
+    "depends_on": [
+      "central-suspend"
+    ],
+    "description": "Draft a no-data evaluation requirements matrix: proposed linguistic and cultural coverage for Japanese, Thai and Vietnamese; baseline-selection questions; threshold-setting procedures; evaluator independence; and resource and permission evidence needed later. Use only the frozen dossier, not contribution content, model runs or newly created test datasets. Leave materials, thresholds and evaluator appointments unagreed. Completion cannot satisfy evaluation_capacity or any other operational prerequisite.",
+    "evidence_refs": [
+      "C_ASEAN_GENAI",
+      "C_TH_LANGUAGE_CAPABILITY_REPORT"
+    ],
+    "fallbacks": [],
+    "id": "central-no-data-evaluation-design",
+    "kind": "preparation",
+    "prerequisites": [
+      {
+        "equals": true,
+        "fact": "coordination_authorized",
+        "reason": "Drafting requirements is authorized; conducting evaluation is not."
+      }
+    ],
+    "reconsideration_triggers": [
+      "Contribution availability changes.",
+      "Proposed language coverage, evaluator arrangements or processing scope changes.",
+      "New scope-specific rights, resource or capacity evidence becomes available."
+    ],
+    "title": "Draft evaluation requirements without data",
+    "when": {
+      "operator": "all",
+      "tests": [
+        {
+          "equals": false,
+          "fact": "contribution_available"
+        }
+      ]
+    }
+  },
+  "parent_changed_summary": {
+    "blocked": [],
+    "conditional": [],
+    "inactive": [
+      "central-pool-design",
+      "central-pilot-option",
+      "central-assessment-option"
+    ],
+    "supported": [
+      "central-charter",
+      "central-suspend",
+      "central-readiness-register"
+    ]
+  },
+  "parent_id": "centralized-v1",
+  "reviewer_type": "deterministic_software_check"
+}

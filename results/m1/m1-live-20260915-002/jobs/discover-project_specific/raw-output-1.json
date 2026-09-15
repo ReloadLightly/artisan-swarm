@@ -1,0 +1,253 @@
+{
+  "actions": [
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "U_PARTNER_CONSENT",
+        "U_FUNDING"
+      ],
+      "depends_on": [],
+      "description": "Draft separate Japanese-, Thai- and Vietnamese-language project cards specifying a proposed use case, intended beneficiaries, decision rights, resource questions and stop criteria. Assign no institution a role or commitment. Policy priorities motivate exploration, not participation or feasibility.",
+      "evidence_refs": [
+        "C_JP_CO_CREATION",
+        "C_TH_CAPACITY_POLICY",
+        "C_VN_STRATEGY",
+        "I_COOPERATION_DESIGN_SPACE"
+      ],
+      "fallbacks": [],
+      "id": "ps-charter",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "coordination_authorized",
+          "reason": "Only fictional preparatory proposal drafting is authorized."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Preparatory authorization changes.",
+        "A proposed project's purpose or governance scope changes."
+      ],
+      "title": "Draft separable project charters",
+      "when": {
+        "operator": "all",
+        "tests": []
+      }
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_AVAILABLE",
+        "A_COORDINATION_AUTHORIZED",
+        "U_LOCAL_PERMISSION",
+        "U_POOLED_PERMISSION"
+      ],
+      "depends_on": [
+        "ps-charter"
+      ],
+      "description": "Draft an optional contribution-dependent project annex and a provenance, purpose, permission and suitability questionnaire. Identify which proposed activities would depend on the anonymous contribution without inspecting or processing it. Availability is a scenario assumption, not evidence of rights.",
+      "evidence_refs": [
+        "C_ASEAN_GOVERNANCE"
+      ],
+      "fallbacks": [
+        {
+          "action_id": "ps-rescope",
+          "reason": "If the contribution becomes unavailable, remove its dependent activities rather than assume a substitute."
+        }
+      ],
+      "id": "ps-contribution-annex",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "coordination_authorized",
+          "reason": "The annex is proposal design only."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Contribution availability changes.",
+        "Provenance or permission evidence changes."
+      ],
+      "title": "Scope the contribution-dependent option",
+      "when": {
+        "operator": "all",
+        "tests": [
+          {
+            "equals": true,
+            "fact": "contribution_available"
+          }
+        ]
+      }
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "A_COORDINATION_AUTHORIZED",
+        "U_PARTNER_CONSENT",
+        "U_FUNDING"
+      ],
+      "depends_on": [
+        "ps-charter"
+      ],
+      "description": "Suspend the contribution-dependent project annex. Retain only data-independent drafting of skills objectives, governance templates and evaluation specifications for separately scoped projects. Do not presume replacement datasets, synthetic-data permission, partner agreement or resources. Record reduced scope and defer empirical claims.",
+      "evidence_refs": [
+        "C_JP_CO_CREATION",
+        "C_ASEAN_GENAI",
+        "I_COOPERATION_DESIGN_SPACE"
+      ],
+      "fallbacks": [],
+      "id": "ps-rescope",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "coordination_authorized",
+          "reason": "Continuation covers document preparation only, not workshops or partner activity."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Contribution availability changes.",
+        "A replacement contribution is proposed; its rights and suitability require fresh review."
+      ],
+      "title": "Preserve preparation while suspending data-dependent work",
+      "when": {
+        "operator": "all",
+        "tests": [
+          {
+            "equals": false,
+            "fact": "contribution_available"
+          }
+        ]
+      }
+    },
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "U_EVALUATION_CAPACITY",
+        "U_FUNDING",
+        "U_PARTNER_CONSENT"
+      ],
+      "depends_on": [
+        "ps-charter"
+      ],
+      "description": "Draft project-specific evaluation specifications covering linguistic and cultural relevance, failure reporting, evaluator qualifications, material provenance and acceptance-threshold questions. Keep language-level findings separate unless comparability is demonstrated. Neither a shared benchmark nor available evaluators are established; no testing is authorized.",
+      "evidence_refs": [
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [],
+      "id": "ps-evaluation-spec",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "coordination_authorized",
+          "reason": "Drafting criteria does not require or establish operational evaluation capacity."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Project scope changes.",
+        "Named evaluators, materials or proposed thresholds become available."
+      ],
+      "title": "Specify evaluation separately for each project",
+      "when": {
+        "operator": "all",
+        "tests": []
+      }
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_AVAILABLE",
+        "A_COORDINATION_AUTHORIZED",
+        "U_PARTNER_CONSENT",
+        "U_LOCAL_PERMISSION",
+        "U_POOLED_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "depends_on": [
+        "ps-contribution-annex",
+        "ps-evaluation-spec"
+      ],
+      "description": "Conditionally recommend a bounded, separately governed local-processing project option for further authorization review, not execution. Scope excludes cross-border data, model-update and evaluation-output transfers. Require project-specific evidence supporting every gate; broad policy statements cannot satisfy them. Any transfer proposal requires a revised permission review. Unknown gates leave this option conditional, with no data handling, testing or deployment.",
+      "evidence_refs": [
+        "C_ASEAN_GOVERNANCE",
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [
+        {
+          "action_id": "ps-rescope",
+          "reason": "Contribution loss activates the independently guarded preparation-only redesign."
+        }
+      ],
+      "id": "ps-project-readiness",
+      "kind": "evaluation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "coordination_authorized",
+          "reason": "The output remains a proposal-readiness recommendation."
+        },
+        {
+          "equals": true,
+          "fact": "partner_consent",
+          "reason": "Named partners must confirm the specific proposed scope."
+        },
+        {
+          "equals": true,
+          "fact": "local_processing_permission",
+          "reason": "Locality does not establish data rights or processing permission."
+        },
+        {
+          "equals": true,
+          "fact": "funding_confirmed",
+          "reason": "A project-specific budget, staffing and compute commitments must be established."
+        },
+        {
+          "equals": true,
+          "fact": "evaluation_capacity",
+          "reason": "Agreed materials, thresholds and available qualified evaluators must be established."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Any prerequisite changes.",
+        "Contribution becomes unavailable.",
+        "Cross-border processing or sharing is proposed."
+      ],
+      "title": "Gate the contribution-dependent project recommendation",
+      "when": {
+        "operator": "all",
+        "tests": [
+          {
+            "equals": true,
+            "fact": "contribution_available"
+          }
+        ]
+      }
+    }
+  ],
+  "architecture": "project_specific",
+  "assumption_refs": [
+    "A_CONTRIBUTION_AVAILABLE",
+    "A_CONTRIBUTION_UNAVAILABLE",
+    "A_COORDINATION_AUTHORIZED",
+    "U_PARTNER_CONSENT",
+    "U_LOCAL_PERMISSION",
+    "U_POOLED_PERMISSION",
+    "U_FUNDING",
+    "U_EVALUATION_CAPACITY"
+  ],
+  "engine_version": "m1-1",
+  "evidence_refs": [
+    "C_JP_CO_CREATION",
+    "C_ASEAN_GOVERNANCE",
+    "C_ASEAN_GENAI",
+    "C_TH_CAPACITY_POLICY",
+    "C_VN_STRATEGY",
+    "I_COOPERATION_DESIGN_SPACE"
+  ],
+  "feedback_ids": [],
+  "id": "project_specific-v1",
+  "parent_ids": [],
+  "rationale": "Project-specific charters isolate contribution-dependent work so its hypothetical loss need not block authorized document preparation. Public priorities support exploring cooperation, not this architecture's superiority or political feasibility. Consent, rights, resources and evaluation capacity remain unresolved; no operational commitment follows from a supported drafting action.",
+  "schema_version": "1.0",
+  "title": "Separable projects with contribution-loss suspension"
+}

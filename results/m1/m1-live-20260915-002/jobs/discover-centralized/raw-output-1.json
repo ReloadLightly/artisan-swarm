@@ -1,0 +1,329 @@
+{
+  "actions": [
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "U_PARTNER_CONSENT",
+        "U_FUNDING"
+      ],
+      "depends_on": [],
+      "description": "Draft a nonbinding centralized cooperation charter: a proposed shared processing site, joint oversight, country-specific language objectives, withdrawal procedures and allocation questions. Policy compatibility supports exploration, not partner agreement, hosting authority or resources.",
+      "evidence_refs": [
+        "C_JP_CO_CREATION",
+        "C_ASEAN_GOVERNANCE",
+        "I_COOPERATION_DESIGN_SPACE"
+      ],
+      "fallbacks": [],
+      "id": "central-charter",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "coordination_authorized",
+          "reason": "Authorization covers proposal drafting only."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Preparatory authorization changes.",
+        "Proposed oversight or hosting arrangements prove unacceptable during a separately authorized consultation."
+      ],
+      "title": "Draft centralized governance options",
+      "when": {
+        "operator": "all",
+        "tests": []
+      }
+    },
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "A_CONTRIBUTION_AVAILABLE",
+        "U_POOLED_PERMISSION",
+        "U_LOCAL_PERMISSION",
+        "U_FUNDING"
+      ],
+      "depends_on": [
+        "central-charter"
+      ],
+      "description": "Draft a pooled-processing specification without accessing the contribution. List provenance, permitted purposes, transfer requirements, access controls, retention, deletion, security and cost questions for qualified review. Do not nominate a committed host or treat availability as permission.",
+      "evidence_refs": [
+        "C_ASEAN_GOVERNANCE"
+      ],
+      "fallbacks": [
+        {
+          "action_id": "central-suspend",
+          "reason": "If the contribution becomes unavailable, replace contribution-dependent design with suspension and a no-data planning track."
+        }
+      ],
+      "id": "central-pool-design",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "coordination_authorized",
+          "reason": "Only specification drafting is authorized."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Contribution availability changes.",
+        "Rights review constrains pooling or local preparation.",
+        "Host costs or security requirements change."
+      ],
+      "title": "Specify a conditional shared processing site",
+      "when": {
+        "operator": "all",
+        "tests": [
+          {
+            "equals": true,
+            "fact": "contribution_available"
+          }
+        ]
+      }
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_AVAILABLE",
+        "U_PARTNER_CONSENT",
+        "U_POOLED_PERMISSION",
+        "U_LOCAL_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "depends_on": [
+        "central-pool-design"
+      ],
+      "description": "Recommend a bounded centralized pilot option only after every prerequisite is affirmatively established for its specific scope. Any actual pilot requires a separate authorized decision; this program neither transfers data nor launches work. National policies do not establish pilot commitments.",
+      "evidence_refs": [
+        "C_JP_CO_CREATION",
+        "C_ASEAN_GOVERNANCE",
+        "C_TH_CAPACITY_POLICY",
+        "C_VN_STRATEGY"
+      ],
+      "fallbacks": [
+        {
+          "action_id": "central-suspend",
+          "reason": "Loss of the contribution activates suspension, not an assumed replacement."
+        }
+      ],
+      "id": "central-pilot-option",
+      "kind": "execution",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "partner_consent",
+          "reason": "Named partners must agree to the specific pilot and governance arrangements."
+        },
+        {
+          "equals": true,
+          "fact": "pooled_processing_permission",
+          "reason": "Specific rights and applicable pooled or cross-border processing requirements must be established."
+        },
+        {
+          "equals": true,
+          "fact": "local_processing_permission",
+          "reason": "Any local preparation must also be permitted."
+        },
+        {
+          "equals": true,
+          "fact": "funding_confirmed",
+          "reason": "Budget, staffing and compute commitments must be confirmed."
+        },
+        {
+          "equals": true,
+          "fact": "evaluation_capacity",
+          "reason": "An agreed evaluation plan and available evaluators must precede a pilot recommendation."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Any prerequisite becomes unresolved or is withdrawn.",
+        "Contribution becomes unavailable.",
+        "The proposed processing scope changes."
+      ],
+      "title": "Gate the centralized pilot option",
+      "when": {
+        "operator": "all",
+        "tests": [
+          {
+            "equals": true,
+            "fact": "contribution_available"
+          }
+        ]
+      }
+    },
+    {
+      "assumption_refs": [
+        "U_PARTNER_CONSENT",
+        "U_POOLED_PERMISSION",
+        "U_LOCAL_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "depends_on": [
+        "central-pilot-option"
+      ],
+      "description": "Recommend a subsequent assessment option using agreed Japanese, Thai and Vietnamese linguistic and cultural materials, baselines, thresholds and independent review arrangements. Do not claim assessment occurred or infer success from institutional descriptions. Any actual assessment needs separate authorization.",
+      "evidence_refs": [
+        "C_ASEAN_GENAI",
+        "C_TH_LANGUAGE_CAPABILITY_REPORT"
+      ],
+      "fallbacks": [
+        {
+          "action_id": "central-suspend",
+          "reason": "Contribution loss requires redesign rather than unsupported performance claims."
+        }
+      ],
+      "id": "central-assessment-option",
+      "kind": "evaluation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "partner_consent",
+          "reason": "Assessment scope and reporting require partner agreement."
+        },
+        {
+          "equals": true,
+          "fact": "pooled_processing_permission",
+          "reason": "Shared assessment processing must be permitted."
+        },
+        {
+          "equals": true,
+          "fact": "local_processing_permission",
+          "reason": "Local assessment activities must be permitted."
+        },
+        {
+          "equals": true,
+          "fact": "funding_confirmed",
+          "reason": "Assessment resources must be committed."
+        },
+        {
+          "equals": true,
+          "fact": "evaluation_capacity",
+          "reason": "Materials, thresholds and evaluators must be established."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Evaluation coverage is inadequate.",
+        "Permissions or consent change.",
+        "Contribution becomes unavailable."
+      ],
+      "title": "Condition the assessment option",
+      "when": {
+        "operator": "all",
+        "tests": [
+          {
+            "equals": true,
+            "fact": "contribution_available"
+          }
+        ]
+      }
+    },
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "U_PARTNER_CONSENT",
+        "U_POOLED_PERMISSION",
+        "U_LOCAL_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "depends_on": [
+        "central-charter"
+      ],
+      "description": "Draft suspension of contribution-dependent pooling, pilot and assessment proposals. Preserve only the proposed shared governance structure, evaluation specifications and resource questions. Draft criteria for considering a replacement contribution, but assume none exists or is permitted. Local or synthetic substitutes are not automatic workarounds.",
+      "evidence_refs": [
+        "C_ASEAN_GOVERNANCE",
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [],
+      "id": "central-suspend",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "coordination_authorized",
+          "reason": "The fallback is limited to no-data proposal drafting."
+        }
+      ],
+      "reconsideration_triggers": [
+        "A contribution becomes available; repeat scope-specific readiness review.",
+        "Preparatory authorization changes.",
+        "Centralized design no longer merits further exploration."
+      ],
+      "title": "Suspend pooling and preserve no-data planning",
+      "when": {
+        "operator": "all",
+        "tests": [
+          {
+            "equals": false,
+            "fact": "contribution_available"
+          }
+        ]
+      }
+    },
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "U_PARTNER_CONSENT",
+        "U_POOLED_PERMISSION",
+        "U_LOCAL_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "depends_on": [
+        "central-charter"
+      ],
+      "description": "Draft a decision register separating supported planning from conditional commitments. Record unknowns as unresolved, not refusals. Compare continued suspension, a revised centralized scope and later reconsideration of other architectures using rights, resource and evaluation requirements; assign no invented utilities or political feasibility scores.",
+      "evidence_refs": [
+        "I_COOPERATION_DESIGN_SPACE",
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [],
+      "id": "central-readiness-register",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "equals": true,
+          "fact": "coordination_authorized",
+          "reason": "This is a documentary readiness review, not external consultation or evaluation."
+        }
+      ],
+      "reconsideration_triggers": [
+        "Contribution availability changes.",
+        "Any unresolved prerequisite receives scope-specific evidence.",
+        "Partners propose different arrangements through an authorized process."
+      ],
+      "title": "Maintain conditional commitment register",
+      "when": {
+        "operator": "all",
+        "tests": []
+      }
+    }
+  ],
+  "architecture": "centralized",
+  "assumption_refs": [
+    "A_COORDINATION_AUTHORIZED",
+    "A_CONTRIBUTION_AVAILABLE",
+    "A_CONTRIBUTION_UNAVAILABLE",
+    "U_PARTNER_CONSENT",
+    "U_POOLED_PERMISSION",
+    "U_LOCAL_PERMISSION",
+    "U_FUNDING",
+    "U_EVALUATION_CAPACITY"
+  ],
+  "engine_version": "m1-1",
+  "evidence_refs": [
+    "C_JP_CO_CREATION",
+    "C_ASEAN_GOVERNANCE",
+    "C_ASEAN_GENAI",
+    "C_TH_CAPACITY_POLICY",
+    "C_TH_LANGUAGE_CAPABILITY_REPORT",
+    "C_VN_STRATEGY",
+    "I_COOPERATION_DESIGN_SPACE"
+  ],
+  "feedback_ids": [],
+  "id": "centralized-v1",
+  "parent_ids": [],
+  "rationale": "Centralization is a design hypothesis, not a policy mandate or established capability. A shared-site proposal can remain defensible as no-data planning after hypothetical contribution loss, while pooling and pilot options become inactive. Unknown consent, rights, resources and evaluation capacity gate commitments; supported means recommended within this fictional case only.",
+  "schema_version": "1.0",
+  "title": "Conditional shared-site design with contribution-loss suspension"
+}

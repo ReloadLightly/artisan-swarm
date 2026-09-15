@@ -1,0 +1,11 @@
+{
+  "child_hash": "1b962c97e6faff290d25ff0e8e9e08c8a6481be3204eb4279ab6e810a3c55e5f",
+  "child_id": "centralized-v1-r1",
+  "feedback_ids": [
+    "O1"
+  ],
+  "operator": "model_mediated_mutation",
+  "parent_hash": "77eb3efca1e7a9fcc829cccdebe2d55d843c9adf40e639faf12119687123c867",
+  "parent_id": "centralized-v1",
+  "selection_rule": "Count distinct blocked or conditional action IDs with actionable critic objections; descending count, then lexicographic candidate ID. No geopolitical score."
+}

@@ -1,0 +1,20 @@
+{
+  "attempt": 2,
+  "completed_turns": 0,
+  "duration_seconds": 2.655,
+  "error": "CLI exit 1; local diagnostic: .local/research/m1-live-20260915-001/discover-centralized-2.stderr.log",
+  "error_events": 2,
+  "exit_code": 1,
+  "finished_at": "2026-09-15T00:03:42+00:00",
+  "model": "gpt-6-astra",
+  "prompt_hash": "61d9ec20d1cc7baacce237db6ce41569dd624c8c411575add127731bdce57132",
+  "provider_request_count": null,
+  "provider_retry_count": null,
+  "reasoning_effort": "medium",
+  "request_hash": "9988f0846fdf52ab13b870656cc93fdb80b3cc2c8fca669137d681f460876e51",
+  "settings_observation": "explicit CLI invocation; provider does not return resolved model in exec JSONL",
+  "started_at": "2026-09-15T00:03:40+00:00",
+  "status": "failed",
+  "tool_item_types": [],
+  "usage": null
+}

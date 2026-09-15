@@ -1,0 +1,42 @@
+{
+  "candidate_id": "centralized-v1-r1",
+  "claim_ids": [
+    "A_COORDINATION_AUTHORIZED",
+    "A_CONTRIBUTION_UNAVAILABLE",
+    "C_ASEAN_GENAI",
+    "I_COOPERATION_DESIGN_SPACE",
+    "U_PARTNER_CONSENT",
+    "U_LOCAL_PERMISSION",
+    "U_POOLED_PERMISSION",
+    "U_FUNDING",
+    "U_EVALUATION_CAPACITY"
+  ],
+  "id": "review-1",
+  "next_evidence": [
+    "Separately authorized, named-partner confirmation of proposed scope, governance and participation (U_PARTNER_CONSENT; A_COORDINATION_AUTHORIZED).",
+    "For any replacement contribution, provenance, availability and qualified scope-specific review of local and pooled processing permissions (A_CONTRIBUTION_UNAVAILABLE; U_LOCAL_PERMISSION; U_POOLED_PERMISSION).",
+    "A priced staffing, compute and assessment plan with confirmed commitments, named evaluators and agreed materials and thresholds (U_FUNDING; U_EVALUATION_CAPACITY)."
+  ],
+  "outcome": "retain",
+  "reasons": [
+    "O1 is addressed: misleading fallback links are removed. The suspension branch has its own unavailable-contribution guard and charter dependency; pooling, pilot and assessment remain inactive (A_CONTRIBUTION_UNAVAILABLE).",
+    "Narrative and gates agree for the changed case. Charter, suspension, requirements drafting and readiness tracking require drafting authorization and do not permit consultation, data processing or evaluation (A_COORDINATION_AUTHORIZED).",
+    "The repair is substantive but limited to planning: it adds a separately gated evaluation-requirements action with an explicit suspension dependency, rather than merely relabeling outcomes. It does not establish evaluation capacity (C_ASEAN_GENAI; U_EVALUATION_CAPACITY).",
+    "Pilot and assessment prerequisites retain unknown consent, both permissions, funding and evaluation capacity. Their inactive status does not resolve those unknowns (U_PARTNER_CONSENT; U_LOCAL_PERMISSION; U_POOLED_PERMISSION; U_FUNDING; U_EVALUATION_CAPACITY).",
+    "Parent lineage and competing architectures remain visible, and new weaknesses are acknowledged. Neither executable checks nor this review establish architectural superiority or political feasibility (I_COOPERATION_DESIGN_SPACE)."
+  ],
+  "recommendation": "Retain as a revised no-data planning alternative only; preserve the parent and alternatives. Require fresh scope-specific readiness review and separate authorization before any external activity.",
+  "resource_requirements": [
+    "Drafting and governance-review effort requires allocation; no staffing commitment or amount is established (U_FUNDING).",
+    "Any later pilot requires budget, compute, security and qualified rights-review resources; amounts and commitments remain unknown (U_FUNDING; U_LOCAL_PERMISSION; U_POOLED_PERMISSION).",
+    "Multilingual materials, evaluator availability and independent assessment arrangements remain unestablished (U_EVALUATION_CAPACITY)."
+  ],
+  "reviewer_type": "model_judgment",
+  "strongest_objection": "The parent already preserved no-data evaluation specifications. The new action chiefly makes that work explicit and traceable; it demonstrates neither operational resilience nor a reason to prefer centralization (A_CONTRIBUTION_UNAVAILABLE; U_EVALUATION_CAPACITY; I_COOPERATION_DESIGN_SPACE).",
+  "substantive_repair": true,
+  "unresolved_interests": [
+    "Partner preferences on hosting, oversight, withdrawal, language priorities and benefit allocation remain unconfirmed (U_PARTNER_CONSENT; I_COOPERATION_DESIGN_SPACE).",
+    "Data-rights and permitted-use interests remain unresolved under both local and pooled architectures (U_LOCAL_PERMISSION; U_POOLED_PERMISSION).",
+    "Cost-sharing and acceptable evaluation coverage, independence and thresholds remain unsettled (U_FUNDING; U_EVALUATION_CAPACITY)."
+  ]
+}

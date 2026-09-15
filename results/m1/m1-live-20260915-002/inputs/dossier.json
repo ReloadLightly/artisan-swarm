@@ -1,0 +1,368 @@
+{
+  "claims": [
+    {
+      "id": "C_JP_CO_CREATION",
+      "locator": "Section 1(2)(ii), second bullet.",
+      "source_ids": [
+        "S_JP_MOFA_2025"
+      ],
+      "support_review": {
+        "note": "Proposal language checked; not interpreted as funding, implementation or pilot consent.",
+        "outcome": "supported_as_reported_proposal",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "Japan's MOFA reports a proposed ASEAN AI co-creation initiative covering model development, human-resource development and co-created solutions at the October 2025 summit.",
+      "type": "documented_fact"
+    },
+    {
+      "id": "C_ASEAN_GOVERNANCE",
+      "locator": "Printed page 8, Introduction 1, paragraphs 1 and 3; Introduction 2, paragraph 2.",
+      "source_ids": [
+        "S_ASEAN_GUIDE_2024"
+      ],
+      "support_review": {
+        "note": "Scope and non-substitution statement checked. No data-transfer legal determination made.",
+        "outcome": "supported_as_guidance",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "ASEAN's 2024 traditional-AI guide encourages governance interoperability and states that adoption is voluntary and does not supersede national laws.",
+      "type": "documented_fact"
+    },
+    {
+      "id": "C_ASEAN_GENAI",
+      "locator": "Printed page 28 (PDF page 28), section 3.5, opening two paragraphs and item (a), especially final paragraph.",
+      "source_ids": [
+        "S_ASEAN_GENAI_2025"
+      ],
+      "support_review": {
+        "note": "Testing recommendation and stated capacity limitation both checked; no existing shared benchmark assumed.",
+        "outcome": "supported_as_recommendation",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "The Expanded ASEAN Guide recommends regionally relevant generative-AI evaluation, including linguistic and cultural considerations, while acknowledging that testing methods and independent testing capacity need further development.",
+      "type": "documented_fact"
+    },
+    {
+      "id": "C_TH_CAPACITY_POLICY",
+      "locator": "Opening paragraph and five numbered strategies under the plan heading.",
+      "source_ids": [
+        "S_TH_NECTEC_2022"
+      ],
+      "support_review": {
+        "note": "List checked; expected results were not treated as achieved capacity.",
+        "outcome": "supported_as_historical_policy",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "NECTEC's 2022 account of Thailand's Cabinet-approved AI plan identifies governance readiness, infrastructure, human capability, innovation and adoption as five strategy areas.",
+      "type": "documented_fact"
+    },
+    {
+      "id": "C_TH_LANGUAGE_CAPABILITY_REPORT",
+      "locator": "Second substantive paragraph and first two feature bullets under จุดเด่นของ Pathumma LLM.",
+      "source_ids": [
+        "S_TH_PATHUMMA_2025"
+      ],
+      "support_review": {
+        "note": "Thai passage checked with model translation; performance and suitability for this case were not tested.",
+        "outcome": "supported_as_institutional_description",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "NECTEC describes Pathumma as its model designed for Thai-language and cultural contexts with text, audio and image processing.",
+      "type": "documented_fact"
+    },
+    {
+      "id": "C_VN_STRATEGY",
+      "locator": "Lead and Chuyển từ ứng dụng sang nghiên cứu, phát triển, paragraphs 1–2; English companion matching section.",
+      "source_ids": [
+        "S_VN_STRATEGY_2026"
+      ],
+      "support_review": {
+        "note": "Vietnamese wording and English companion checked; underlying signed instrument not reviewed.",
+        "outcome": "supported_as_official_report",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "Vietnam Government News reports approval of Decision 1671/QĐ-TTg on August 28, 2026, describing an AI strategy that treats human resources, infrastructure and data as foundations and stresses domestic research and AI governance.",
+      "type": "documented_fact"
+    },
+    {
+      "id": "C_VN_LANGUAGE_MODELS",
+      "locator": "Hình thành tối thiểu 10 thương hiệu AI Việt Nam, final paragraph; English companion Developing at least 10 Vietnamese AI brands, final paragraph.",
+      "source_ids": [
+        "S_VN_STRATEGY_2026"
+      ],
+      "support_review": {
+        "note": "Eight is a policy target, not a count of available models.",
+        "outcome": "supported_as_target_only",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "The reported 2026 Vietnamese strategy sets a 2030 goal of developing at least eight Vietnamese-language AI models.",
+      "type": "documented_fact"
+    },
+    {
+      "id": "I_COOPERATION_DESIGN_SPACE",
+      "locator": "Synthesis of C_JP_CO_CREATION, C_ASEAN_GENAI, C_TH_CAPACITY_POLICY and C_VN_STRATEGY; interpretation by the development model.",
+      "source_ids": [
+        "S_JP_MOFA_2025",
+        "S_ASEAN_GENAI_2025",
+        "S_TH_NECTEC_2022",
+        "S_VN_STRATEGY_2026"
+      ],
+      "support_review": {
+        "note": "Policy compatibility is a design hypothesis; interests may conflict and consultation is absent.",
+        "outcome": "interpretation_not_source_fact",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "These public priorities make local-language model work, skills development and evaluation plausible subjects to explore together, but do not select a centralized, federated or project-specific architecture.",
+      "type": "interpretation"
+    },
+    {
+      "id": "A_CONTRIBUTION_AVAILABLE",
+      "locator": "Development case case.json, facts.contribution_available = true; M1 scenario design.",
+      "source_ids": [],
+      "support_review": {
+        "note": "No real institution or dataset is named.",
+        "outcome": "explicit_scenario_assumption",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "In the development case, one anonymous proposed data contribution is treated as available for conditional proposal design. Availability alone implies no rights, consent, suitability or permission to process it.",
+      "type": "assumption"
+    },
+    {
+      "id": "A_COORDINATION_AUTHORIZED",
+      "locator": "Development case case.json, facts.coordination_authorized = true; M1 design-work boundary.",
+      "source_ids": [],
+      "support_review": {
+        "note": "Real partner consent remains separately unknown.",
+        "outcome": "explicit_scenario_assumption",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "Preparatory proposal design is authorized within the fictional case. This permits drafting questions, options and decision criteria; it confers no authority to negotiate for partners, commit resources, process data or deploy a pilot.",
+      "type": "assumption"
+    },
+    {
+      "id": "A_CONTRIBUTION_UNAVAILABLE",
+      "locator": "disruption.json, changes.contribution_available = false; hypothetical = true; held_out = false.",
+      "source_ids": [],
+      "support_review": {
+        "note": "No attribution of refusal, withdrawal or disruption to a real institution.",
+        "outcome": "explicit_scenario_assumption",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "The demonstration introduces a hypothetical change: the anonymous proposed data contribution becomes unavailable. This condition was known to the development team and is not a held-out test or an actual event.",
+      "type": "assumption"
+    },
+    {
+      "id": "U_PARTNER_CONSENT",
+      "locator": "Case boundary: case.json, facts.partner_consent = null; six-source review scope, not a universal absence claim.",
+      "source_ids": [],
+      "support_review": {
+        "note": "Obtain named partner confirmation through an authorized process.",
+        "outcome": "unresolved_prerequisite",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "No consent by actual partners to this proposed trilateral pilot has been established in this dossier. This is unresolved, not a finding of refusal.",
+      "type": "unknown"
+    },
+    {
+      "id": "U_POOLED_PERMISSION",
+      "locator": "Case boundary: case.json, facts.pooled_processing_permission = null.",
+      "source_ids": [],
+      "support_review": {
+        "note": "No substantive legal determination; geographic architecture alone does not establish permission.",
+        "outcome": "unresolved_prerequisite",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "Permission and applicable requirements for pooled or cross-border processing of any proposed data are unresolved. Qualified review and specific data-rights evidence are needed.",
+      "type": "unknown"
+    },
+    {
+      "id": "U_LOCAL_PERMISSION",
+      "locator": "Case boundary: case.json, facts.local_processing_permission = null.",
+      "source_ids": [],
+      "support_review": {
+        "note": "Requires specific data provenance, purposes and permissions evidence.",
+        "outcome": "unresolved_prerequisite",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "Permission for local processing of proposed data is also unresolved. Keeping data local does not by itself establish rights or consent.",
+      "type": "unknown"
+    },
+    {
+      "id": "U_FUNDING",
+      "locator": "Case boundary: case.json, facts.funding_confirmed = null.",
+      "source_ids": [],
+      "support_review": {
+        "note": "National targets do not supply pilot resources.",
+        "outcome": "unresolved_prerequisite",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "No confirmed pilot budget, staffing allocation, compute contribution or priced resource plan has been established. Costs and commitments are unknown.",
+      "type": "unknown"
+    },
+    {
+      "id": "U_EVALUATION_CAPACITY",
+      "locator": "Case boundary: case.json, facts.evaluation_capacity = null.",
+      "source_ids": [],
+      "support_review": {
+        "note": "A recommendation to develop evaluation is not evidence that evaluation capacity exists.",
+        "outcome": "unresolved_prerequisite",
+        "reviewer_type": "model_judgment"
+      },
+      "text": "Named evaluators, their availability, agreed Japanese/Thai/Vietnamese evaluation materials, acceptance thresholds and capacity for independent assessment have not been established for the pilot.",
+      "type": "unknown"
+    }
+  ],
+  "evidence_cutoff": "2026-09-14T23:56:51.360466Z",
+  "frozen": true,
+  "limitations": [
+    "Six-source bounded purposive sample, not a comprehensive policy or literature review.",
+    "Primary institutional accounts can emphasize favorable achievements or ambitions; no independent performance or implementation verification was conducted.",
+    "No stakeholder interviews, partner negotiations, private data access or legal review occurred.",
+    "No explicit source contradiction was found in the reviewed passages. Lack of a detected contradiction is not evidence that interests align.",
+    "Original-language paraphrases are model translations and may miss nuance.",
+    "A newer 2026 Vietnamese policy report was selected after discovery; the 2021 strategy was inspected as background but is not treated as the current policy source.",
+    "Source bytes were hashed when directly retrievable but full downloaded pages and PDFs were not retained. Replay freezes this reviewed dossier, not the mutable external websites."
+  ],
+  "review_scope": "A Codex development evidence subagent read the cited passages through the web browsing tool, checked claim meaning against them, and retrieved available source bytes into memory for hashing. This is a limited model semantic spot-check, not independent expert validation, stakeholder consultation, legal review, or a research-worker experiment.",
+  "reviewer_type": "model_judgment",
+  "schema_version": "1.0",
+  "scope": "Small public-source dossier for proposed Japan–Thailand–Vietnam local-language AI cooperation. Six principal sources and one official translation companion; a development case, not evidence of an existing trilateral pilot.",
+  "sources": [
+    {
+      "id": "S_JP_MOFA_2025",
+      "language": "en",
+      "limitations": "Japan's account of policy discussion. It does not identify consent, contributions, resources or implementation arrangements for this proposed trilateral case.",
+      "locator": "Section 1, paragraph (2), subheading ii, second bullet; paragraph (3), sentence beginning Many countries.",
+      "paraphrase": "Japan proposed an ASEAN AI co-creation initiative combining model work, skills development and jointly designed solutions. MOFA reports that many participating countries welcomed it.",
+      "publication_date": "2025-10-26",
+      "publisher": "Ministry of Foreign Affairs of Japan",
+      "retrieval": {
+        "direct_fetch_attempted_at": "2026-09-14T23:56:47.352418Z",
+        "direct_fetch_error": "HTTP Error 403: Forbidden",
+        "semantic_access": "web browsing tool: full HTML text available",
+        "sha256": null,
+        "stored_full_content": false
+      },
+      "retrieval_timestamp_basis": "UTC time recorded immediately after the browsing retrieval batch; exact individual HTTP response time unavailable.",
+      "retrieved_at": "2026-09-14T23:55:55Z",
+      "title": "The 28th ASEAN Japan Summit",
+      "translation": "Official English page; no new translation.",
+      "url": "https://www.mofa.go.jp/a_o/rp/pageite_000001_00004.html"
+    },
+    {
+      "id": "S_ASEAN_GUIDE_2024",
+      "language": "en",
+      "limitations": "Governance guidance, not a project-specific permission or legal opinion; generative AI requires the separately recorded supplement.",
+      "locator": "Printed page 8 (PDF page 8), Introduction sections 1 Objectives, paragraphs 1 and 3, and 2 Assumptions, paragraph 2.",
+      "paraphrase": "The regional governance guide promotes interoperable approaches to responsible traditional AI. Adoption is voluntary, and the guidance does not replace national requirements.",
+      "publication_date": "2024-02",
+      "publication_date_basis": "The 2025 Expanded Guide conclusion identifies the original as published in February 2024; day not established.",
+      "publication_date_precision": "month",
+      "publisher": "ASEAN Secretariat",
+      "retrieval": {
+        "bytes": 4233765,
+        "http_status": 200,
+        "sha256": "6464a6d912a918a1b49c36b7dbd7f66b4756352e49164c5020f28b0b190bfe4e",
+        "stored_full_content": false
+      },
+      "retrieved_at": "2026-09-14T23:56:50.286681Z",
+      "title": "ASEAN Guide on AI Governance and Ethics",
+      "translation": "Original English text.",
+      "url": "https://asean.org/wp-content/uploads/2024/02/ASEAN-Guide-on-AI-Governance-and-Ethics_beautified_201223_v2.pdf"
+    },
+    {
+      "date_context_url": "https://www.pdpc.gov.sg/news-and-events/announcements/2025/01/three-guides-unveiled-at-asean-digital-ministers-meeting-%28adgmin%29-2025",
+      "id": "S_ASEAN_GENAI_2025",
+      "language": "en",
+      "limitations": "Proposed evaluation practices do not establish evaluators, agreed benchmarks, funding or data rights for this case.",
+      "locator": "Printed page 2, Executive Summary, opening paragraph; printed page 28 (PDF page 28), section 3.5, opening paragraphs and item (a); printed page 39, Conclusion, final paragraph.",
+      "paraphrase": "The supplement addresses generative AI governance and proposes testing attentive to ASEAN languages and cultures. Its recommendations remain voluntary.",
+      "publication_date": "2025-01",
+      "publication_date_basis": "January 2025 ASEAN document publication path and official Singapore PDPC announcement of its unveiling; exact PDF publication day unknown.",
+      "publication_date_precision": "month",
+      "publisher": "ASEAN",
+      "retrieval": {
+        "bytes": 2906548,
+        "http_status": 200,
+        "sha256": "d2f9f1293e9af2f3ca4cc3954e39f94ed6fcd6b52f5e72b28d0d51fc9954ddbd",
+        "stored_full_content": false
+      },
+      "retrieved_at": "2026-09-14T23:56:49.465852Z",
+      "title": "Expanded ASEAN Guide on AI Governance and Ethics – Generative AI",
+      "translation": "Original English text.",
+      "url": "https://asean.org/wp-content/uploads/2025/01/Expanded-ASEAN-Guide-on-AI-Governance-and-Ethics-Generative-AI.pdf"
+    },
+    {
+      "event_date": "2022-07-26",
+      "id": "S_TH_NECTEC_2022",
+      "language": "en",
+      "limitations": "The 2022 policy announcement is a historical anchor. Targets and commitments are not verified achievements, and later Thai policy changes were not exhaustively surveyed.",
+      "locator": "Opening paragraph; heading The (Draft) Thailand National AI Strategy and Action Plan (2022–2027), five numbered strategies, items 1–5.",
+      "paraphrase": "NECTEC reports Cabinet approval and lists priorities covering governance readiness, infrastructure, education and skills, innovation and adoption.",
+      "publication_date": "2022-07-30",
+      "publisher": "National Electronics and Computer Technology Center (NECTEC), Thailand",
+      "retrieval": {
+        "bytes": 98674,
+        "http_status": 200,
+        "sha256": "f4a49e71587774cd1267c229b8f7a3bed31abf9a2c7b23655cb83e6b88025961",
+        "stored_full_content": false
+      },
+      "retrieved_at": "2026-09-14T23:56:50.902558Z",
+      "title": "The Cabinet approved the (Draft) Thailand National AI Strategy and Action Plan (2022–2027)",
+      "translation": "Official English institutional page; no new translation.",
+      "url": "https://www.nectec.or.th/en/about/news/cabinet-national-ai-strategy.html"
+    },
+    {
+      "id": "S_TH_PATHUMMA_2025",
+      "language": "th",
+      "limitations": "An institutional description, not independent benchmark evidence. Availability, suitability, terms and contributed resources for this pilot remain unverified; no model was downloaded or tested.",
+      "locator": "Second substantive paragraph beginning Pathumma LLM (ปทุมมา แอลแอลเอ็ม); heading จุดเด่นของ Pathumma LLM, first two feature bullets.",
+      "paraphrase": "NECTEC presents its Pathumma model as designed for Thai language and cultural context, with text, audio and image processing.",
+      "publication_date": "2025-06-04",
+      "publisher": "National Electronics and Computer Technology Center (NECTEC), Thailand",
+      "retrieval": {
+        "bytes": 123898,
+        "http_status": 200,
+        "sha256": "755758e60c637565a8a7632ef426824448b4af89c1fa4fede7fc35b6a6d035c9",
+        "stored_full_content": false
+      },
+      "retrieved_at": "2026-09-14T23:56:51.360466Z",
+      "title": "Pathumma LLM: เทคโนโลยีพัฒนา AI ที่เข้าใจบริบทและวัฒนธรรมไทย",
+      "title_translation": "Pathumma LLM: AI development technology that understands Thai context and culture (model translation)",
+      "translation": "English paraphrase by the development model, checked against the displayed Thai text; not a certified translation.",
+      "url": "https://www.nectec.or.th/innovation/innovation-service/pathumma-llm.html"
+    },
+    {
+      "event_date": "2026-08-28",
+      "id": "S_VN_STRATEGY_2026",
+      "language": "vi",
+      "limitations": "An official policy report, not review of the full signed instrument or verification of implementation. Stated national ambitions imply neither pilot participation nor available resources.",
+      "locator": "Lead naming Decision 1671/QĐ-TTg; Chuyển từ ứng dụng sang nghiên cứu, phát triển, paragraphs 1–2; Hình thành tối thiểu 10 thương hiệu AI Việt Nam, final paragraph.",
+      "paraphrase": "Government News reports approval of an AI strategy emphasizing domestic research, governance, people, infrastructure and data. Its 2030 targets include Vietnamese-language models.",
+      "publication_date": "2026-08-28",
+      "publisher": "Vietnam Government News (Báo Điện tử Chính phủ)",
+      "retrieval": {
+        "bytes": 62427,
+        "http_status": 200,
+        "sha256": "04dbfd81f5d3860b81abee599d9f58b6ede789c2d2b0387c21b9f9b1cb2aca21",
+        "stored_full_content": false
+      },
+      "retrieved_at": "2026-09-14T23:56:49.874314Z",
+      "title": "Chiến lược quốc gia về trí tuệ nhân tạo đến năm 2030, tầm nhìn đến năm 2045",
+      "title_translation": "National strategy on artificial intelligence to 2030, with a vision to 2045 (model translation)",
+      "translation": "Model English paraphrase of the Vietnamese article, cross-checked against the Government News English companion; not a certified translation or a translation of the underlying signed Decision.",
+      "translation_companion": {
+        "locator": "From AI application to research and development, paragraphs 1–4; Developing at least 10 Vietnamese AI brands, final paragraph.",
+        "publication_date": "2026-08-29",
+        "publisher": "Vietnam Government News",
+        "retrieved_at": "2026-09-14T23:56:50.936166Z",
+        "sha256": "dfebf0ae485c1c0330a7ac398fb53e7adcc42e653b22c7fc9fdc65f290272e0c",
+        "stored_full_content": false,
+        "title": "Gov't approves National AI Strategy",
+        "url": "https://en.baochinhphu.vn/govt-approves-national-ai-strategy-111260829094257423.htm"
+      },
+      "url": "https://baochinhphu.vn/chien-luoc-quoc-gia-ve-tri-tue-nhan-tao-den-nam-2030-tam-nhin-den-nam-2045-102260828184636823.htm"
+    }
+  ],
+  "version": "m1-dossier-2026-09-15-v1"
+}

@@ -1,0 +1,63 @@
+{
+  "disagreements": [
+    "Centralized shared oversight, federated reporting interfaces and separable project governance remain competing design hypotheses; the dossier selects none (I_COOPERATION_DESIGN_SPACE).",
+    "Federation does not resolve permission uncertainty: local processing and cross-border summary exchange require scope-specific review (U_LOCAL_PERMISSION, U_POOLED_PERMISSION). Project-specific exclusion of transfers narrows scope rather than establishes superior readiness.",
+    "All three alternatives preserve document preparation after contribution loss, not operational cooperation or demonstrated resilience (A_COORDINATION_AUTHORIZED, A_CONTRIBUTION_UNAVAILABLE)."
+  ],
+  "id": "criticism-1",
+  "objections": [
+    {
+      "action_id": "central-pool-design",
+      "actionable": true,
+      "candidate_id": "centralized-v1",
+      "claim_ids": [
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "A_COORDINATION_AUTHORIZED"
+      ],
+      "id": "O1",
+      "issue": "The changed execution labels the suspension fallback inapplicable although its target is independently supported. This obscures the stated response to contribution loss, without establishing an unsafe continuation.",
+      "suggested_change": "Clarify that the contribution-dependent action is inactive and central-suspend is supported through its own guard, not an activated fallback link."
+    },
+    {
+      "action_id": "F02",
+      "actionable": true,
+      "candidate_id": "federated-v1",
+      "claim_ids": [
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "A_COORDINATION_AUTHORIZED"
+      ],
+      "id": "O2",
+      "issue": "The fallback annotation says inapplicable while F03 is independently supported, making the claimed switch to data-independent design ambiguous.",
+      "suggested_change": "Distinguish inactive F02 from independently supported F03 in the decision explanation; do not describe the fallback link itself as activated."
+    },
+    {
+      "action_id": "ps-contribution-annex",
+      "actionable": true,
+      "candidate_id": "project_specific-v1",
+      "claim_ids": [
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "A_COORDINATION_AUTHORIZED"
+      ],
+      "id": "O3",
+      "issue": "The changed execution marks the rescoping fallback inapplicable despite independently supporting ps-rescope. The presentation does not clearly explain how preparation survives.",
+      "suggested_change": "Explain that ps-rescope survives through its independent guard and charter dependency, while the contribution annex remains inactive."
+    },
+    {
+      "action_id": "ps-rescope",
+      "actionable": true,
+      "candidate_id": "project_specific-v1",
+      "claim_ids": [
+        "U_PARTNER_CONSENT",
+        "U_LOCAL_PERMISSION",
+        "U_POOLED_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "id": "O4",
+      "issue": "Unlike the other candidates' surviving readiness registers, this reduced-scope branch does not explicitly maintain a consolidated record of every unresolved commitment. Its reconsideration triggers focus on contribution availability rather than changes to these prerequisites.",
+      "suggested_change": "Add a drafting-only, project-specific readiness register covering consent, applicable permissions, resources and evaluation capacity, with reconsideration when evidence or scope changes. Preserve unknowns and require fresh review of any replacement."
+    }
+  ],
+  "reviewer_type": "model_judgment",
+  "summary": "Retain all three as conditional planning alternatives. No explicit partner-consent overclaim is identified; consent remains unresolved (U_PARTNER_CONSENT). The actionable concerns are branch-reporting clarity and readiness tracking, not evidence of operational feasibility. No architectural winner is established (I_COOPERATION_DESIGN_SPACE)."
+}

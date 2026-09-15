@@ -1,0 +1,505 @@
+{
+  "actions": [
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "U_PARTNER_CONSENT",
+        "U_FUNDING"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [],
+        "value": "true"
+      },
+      "dependencies": [],
+      "evidence_refs": [
+        "C_JP_CO_CREATION",
+        "C_ASEAN_GOVERNANCE",
+        "I_COOPERATION_DESIGN_SPACE"
+      ],
+      "fallbacks": [],
+      "id": "central-charter",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "Authorization covers proposal drafting only.",
+          "value": "true"
+        }
+      ],
+      "reasons": [
+        "All modeled guards, prerequisites, and dependencies are satisfied."
+      ],
+      "reconsideration_triggers": [
+        "Preparatory authorization changes.",
+        "Separately authorized consultation identifies objections to hosting or oversight."
+      ],
+      "status": "supported",
+      "title": "Draft centralized governance options"
+    },
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "A_CONTRIBUTION_AVAILABLE",
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "U_POOLED_PERMISSION",
+        "U_LOCAL_PERMISSION",
+        "U_FUNDING"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [
+          {
+            "actual": true,
+            "claim_refs": [
+              "A_CONTRIBUTION_AVAILABLE"
+            ],
+            "expected": true,
+            "fact": "contribution_available",
+            "value": "true"
+          }
+        ],
+        "value": "true"
+      },
+      "dependencies": [
+        {
+          "action_id": "central-charter",
+          "status": "supported"
+        }
+      ],
+      "evidence_refs": [
+        "C_ASEAN_GOVERNANCE"
+      ],
+      "fallbacks": [],
+      "id": "central-pool-design",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "Only specification drafting is authorized.",
+          "value": "true"
+        }
+      ],
+      "reasons": [
+        "All modeled guards, prerequisites, and dependencies are satisfied."
+      ],
+      "reconsideration_triggers": [
+        "Contribution availability or identity changes.",
+        "Rights, costs or security requirements change."
+      ],
+      "status": "supported",
+      "title": "Specify a conditional shared processing site"
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_AVAILABLE",
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "U_PARTNER_CONSENT",
+        "U_POOLED_PERMISSION",
+        "U_LOCAL_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [
+          {
+            "actual": true,
+            "claim_refs": [
+              "A_CONTRIBUTION_AVAILABLE"
+            ],
+            "expected": true,
+            "fact": "contribution_available",
+            "value": "true"
+          }
+        ],
+        "value": "true"
+      },
+      "dependencies": [
+        {
+          "action_id": "central-pool-design",
+          "status": "supported"
+        }
+      ],
+      "evidence_refs": [
+        "C_JP_CO_CREATION",
+        "C_ASEAN_GOVERNANCE",
+        "C_TH_CAPACITY_POLICY",
+        "C_VN_STRATEGY"
+      ],
+      "fallbacks": [],
+      "id": "central-pilot-option",
+      "kind": "execution",
+      "prerequisites": [
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_PARTNER_CONSENT"
+          ],
+          "expected": true,
+          "fact": "partner_consent",
+          "reason": "Named partners must agree to the specific pilot and governance.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_POOLED_PERMISSION"
+          ],
+          "expected": true,
+          "fact": "pooled_processing_permission",
+          "reason": "Specific pooled and cross-border processing rights and requirements must be established.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_LOCAL_PERMISSION"
+          ],
+          "expected": true,
+          "fact": "local_processing_permission",
+          "reason": "Local preparation must also be permitted.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_FUNDING"
+          ],
+          "expected": true,
+          "fact": "funding_confirmed",
+          "reason": "Budget, staffing and compute commitments must be confirmed.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_EVALUATION_CAPACITY"
+          ],
+          "expected": true,
+          "fact": "evaluation_capacity",
+          "reason": "Agreed evaluation arrangements and available evaluators must precede recommendation.",
+          "value": "unknown"
+        }
+      ],
+      "reasons": [
+        "Prerequisite partner_consent is unknown: Named partners must agree to the specific pilot and governance.",
+        "Prerequisite pooled_processing_permission is unknown: Specific pooled and cross-border processing rights and requirements must be established.",
+        "Prerequisite local_processing_permission is unknown: Local preparation must also be permitted.",
+        "Prerequisite funding_confirmed is unknown: Budget, staffing and compute commitments must be confirmed.",
+        "Prerequisite evaluation_capacity is unknown: Agreed evaluation arrangements and available evaluators must precede recommendation."
+      ],
+      "reconsideration_triggers": [
+        "Any prerequisite becomes unresolved or is withdrawn.",
+        "Contribution availability or processing scope changes."
+      ],
+      "status": "conditional",
+      "title": "Gate the centralized pilot option"
+    },
+    {
+      "assumption_refs": [
+        "A_CONTRIBUTION_AVAILABLE",
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "U_PARTNER_CONSENT",
+        "U_POOLED_PERMISSION",
+        "U_LOCAL_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [
+          {
+            "actual": true,
+            "claim_refs": [
+              "A_CONTRIBUTION_AVAILABLE"
+            ],
+            "expected": true,
+            "fact": "contribution_available",
+            "value": "true"
+          }
+        ],
+        "value": "true"
+      },
+      "dependencies": [
+        {
+          "action_id": "central-pilot-option",
+          "status": "conditional"
+        }
+      ],
+      "evidence_refs": [
+        "C_ASEAN_GENAI",
+        "C_TH_LANGUAGE_CAPABILITY_REPORT"
+      ],
+      "fallbacks": [],
+      "id": "central-assessment-option",
+      "kind": "evaluation",
+      "prerequisites": [
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_PARTNER_CONSENT"
+          ],
+          "expected": true,
+          "fact": "partner_consent",
+          "reason": "Assessment scope and reporting require partner agreement.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_POOLED_PERMISSION"
+          ],
+          "expected": true,
+          "fact": "pooled_processing_permission",
+          "reason": "Shared assessment processing must be permitted.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_LOCAL_PERMISSION"
+          ],
+          "expected": true,
+          "fact": "local_processing_permission",
+          "reason": "Local assessment activities must be permitted.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_FUNDING"
+          ],
+          "expected": true,
+          "fact": "funding_confirmed",
+          "reason": "Assessment resources must be committed.",
+          "value": "unknown"
+        },
+        {
+          "actual": null,
+          "claim_refs": [
+            "U_EVALUATION_CAPACITY"
+          ],
+          "expected": true,
+          "fact": "evaluation_capacity",
+          "reason": "Materials, thresholds and evaluators must be established.",
+          "value": "unknown"
+        }
+      ],
+      "reasons": [
+        "Prerequisite partner_consent is unknown: Assessment scope and reporting require partner agreement.",
+        "Prerequisite pooled_processing_permission is unknown: Shared assessment processing must be permitted.",
+        "Prerequisite local_processing_permission is unknown: Local assessment activities must be permitted.",
+        "Prerequisite funding_confirmed is unknown: Assessment resources must be committed.",
+        "Prerequisite evaluation_capacity is unknown: Materials, thresholds and evaluators must be established.",
+        "Dependency central-pilot-option is conditional."
+      ],
+      "reconsideration_triggers": [
+        "Evaluation coverage is inadequate.",
+        "Permissions, consent, resources or contribution availability change."
+      ],
+      "status": "conditional",
+      "title": "Condition the assessment option"
+    },
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "U_PARTNER_CONSENT",
+        "U_POOLED_PERMISSION",
+        "U_LOCAL_PERMISSION"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [
+          {
+            "actual": true,
+            "claim_refs": [
+              "A_CONTRIBUTION_AVAILABLE"
+            ],
+            "expected": false,
+            "fact": "contribution_available",
+            "value": "false"
+          }
+        ],
+        "value": "false"
+      },
+      "dependencies": [
+        {
+          "action_id": "central-charter",
+          "status": "supported"
+        }
+      ],
+      "evidence_refs": [
+        "C_ASEAN_GOVERNANCE"
+      ],
+      "fallbacks": [],
+      "id": "central-suspend",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "Only a documentary suspension proposal is authorized.",
+          "value": "true"
+        }
+      ],
+      "reasons": [
+        "Action guard is false in this case."
+      ],
+      "reconsideration_triggers": [
+        "Contribution availability changes; repeat scope-specific review.",
+        "Preparatory authorization changes.",
+        "Centralized design no longer merits exploration."
+      ],
+      "status": "inactive",
+      "title": "Independently suspend contribution-dependent proposals"
+    },
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "U_EVALUATION_CAPACITY",
+        "U_FUNDING",
+        "U_PARTNER_CONSENT",
+        "U_LOCAL_PERMISSION",
+        "U_POOLED_PERMISSION"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [
+          {
+            "actual": true,
+            "claim_refs": [
+              "A_CONTRIBUTION_AVAILABLE"
+            ],
+            "expected": false,
+            "fact": "contribution_available",
+            "value": "false"
+          }
+        ],
+        "value": "false"
+      },
+      "dependencies": [
+        {
+          "action_id": "central-suspend",
+          "status": "inactive"
+        }
+      ],
+      "evidence_refs": [
+        "C_ASEAN_GENAI",
+        "C_TH_LANGUAGE_CAPABILITY_REPORT"
+      ],
+      "fallbacks": [],
+      "id": "central-no-data-evaluation-design",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "Drafting requirements is authorized; conducting evaluation is not.",
+          "value": "true"
+        }
+      ],
+      "reasons": [
+        "Action guard is false in this case."
+      ],
+      "reconsideration_triggers": [
+        "Contribution availability changes.",
+        "Proposed language coverage, evaluator arrangements or processing scope changes.",
+        "New scope-specific rights, resource or capacity evidence becomes available."
+      ],
+      "status": "inactive",
+      "title": "Draft evaluation requirements without data"
+    },
+    {
+      "assumption_refs": [
+        "A_COORDINATION_AUTHORIZED",
+        "A_CONTRIBUTION_UNAVAILABLE",
+        "U_PARTNER_CONSENT",
+        "U_POOLED_PERMISSION",
+        "U_LOCAL_PERMISSION",
+        "U_FUNDING",
+        "U_EVALUATION_CAPACITY"
+      ],
+      "condition": {
+        "operator": "all",
+        "tests": [],
+        "value": "true"
+      },
+      "dependencies": [
+        {
+          "action_id": "central-charter",
+          "status": "supported"
+        }
+      ],
+      "evidence_refs": [
+        "I_COOPERATION_DESIGN_SPACE",
+        "C_ASEAN_GOVERNANCE",
+        "C_ASEAN_GENAI"
+      ],
+      "fallbacks": [],
+      "id": "central-readiness-register",
+      "kind": "preparation",
+      "prerequisites": [
+        {
+          "actual": true,
+          "claim_refs": [
+            "A_COORDINATION_AUTHORIZED"
+          ],
+          "expected": true,
+          "fact": "coordination_authorized",
+          "reason": "Documentary review does not authorize consultation or implementation.",
+          "value": "true"
+        }
+      ],
+      "reasons": [
+        "All modeled guards, prerequisites, and dependencies are satisfied."
+      ],
+      "reconsideration_triggers": [
+        "Any prerequisite receives new evidence or becomes disputed.",
+        "Contribution identity, availability or proposed scope changes.",
+        "Separately authorized consultation proposes another architecture."
+      ],
+      "status": "supported",
+      "title": "Maintain conditional commitment register"
+    }
+  ],
+  "case_id": "m1-japan-thailand-vietnam-local-language-ai",
+  "engine_version": "m1-1",
+  "program_id": "centralized-v1-r1",
+  "summary": {
+    "blocked": [],
+    "conditional": [
+      "central-pilot-option",
+      "central-assessment-option"
+    ],
+    "inactive": [
+      "central-suspend",
+      "central-no-data-evaluation-design"
+    ],
+    "supported": [
+      "central-charter",
+      "central-pool-design",
+      "central-readiness-register"
+    ]
+  }
+}

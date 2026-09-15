@@ -1,0 +1,73 @@
+{
+  "accounting": {
+    "actual_cost": null,
+    "attempts_with_unknown_usage": 2,
+    "cli_invocations": 2,
+    "completed_turns": 0,
+    "failed_attempts": 2,
+    "logical_jobs_completed": 0,
+    "provider_request_count": null,
+    "provider_retry_count": null,
+    "usage": null
+  },
+  "artifact_hashes": {
+    "inputs/case.json": "54b9851d5c01a7226554873796d49bcbaec1443fccecaf40adfefe1b4ddcf79d",
+    "inputs/changed_case.json": "bc4433a575732bd41fb6e0f42da6ba233da9aa1b5d6e46c55e25dc0c356d8b8c",
+    "inputs/disruption.json": "5858b7f6f8314e5f06b85e0c8c070f96f16e7ec766d451e357425d57c72d7453",
+    "inputs/dossier.json": "af123e4b8095acd099bca9b751934ddebdc13d3a61749518f67409af93320ef6",
+    "inputs/evaluation_contract.json": "fe80ac60ade546fd6909c55a961b04302dbdd037d48128072a8e81f564285882",
+    "inputs/program_schema.json": "bff9b5cfeed32bdd4a32781ff1c9b6e2d8d04d5c6ad909c06eeb8b2bb9b4f989",
+    "jobs/discover-centralized/attempt-1.json": "fdee4c26e1a9b96cfad9dd56cba7f9aee1a580d6c50e864d53e379ceb1b3cc8c",
+    "jobs/discover-centralized/attempt-2.json": "d6aacf666293779e4d343b8924d3aa9c63a0190ca7bfc0570c31be18f93b7aaa",
+    "jobs/discover-centralized/prompt-1.json": "7e2c6da318c2beb6a7fe4636f0c3d3b95c4657150c79bde002527550f4f373f1",
+    "jobs/discover-centralized/prompt-2.json": "79a65d73922ec2243fb62c887b9a5191fdbf126d265e934a43b564b3443bafd1",
+    "jobs/discover-centralized/request.json": "9988f0846fdf52ab13b870656cc93fdb80b3cc2c8fca669137d681f460876e51"
+  },
+  "blocker": "Provider HTTP 400 invalid_json_schema: uniqueItems is not permitted in output_schema. Two attempts; no model final, zero completed turns, usage unknown. Engine uniqueness checks unchanged; provider wire projection repaired for subsequent run.",
+  "code_version": {
+    "git_base": "af11de0c9fd3e20ef4b6841dfecdccd5ea9115c1",
+    "source_hashes": {
+      "__init__.py": "f7b767fc87b8fda717c7f6c81e1f9eb0f959ff54b1b77c52f56a69e3c97b1b98",
+      "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "archive.py": "daf1f155ec733159a0103e534ee91a3d46164542adbf8648f6e9aa3bd1fe58e6",
+      "cli.py": "3fef34013ae29642415c8eb4b3cde3f08e68bf961ca2366b472a2e9a8cf5eb76",
+      "evidence.py": "bdfb5e84ba1b46522c836904070073a84dd067195a34db8372ef99302e809090",
+      "feedback.py": "44628e2a24a236e619246cff1f3718296b3c29763193b543d0da89addc451003",
+      "orchestrator.py": "d184e0e0580c76e9153d9e612d3120200de994c27edf23d2f3caa5812dfaa046",
+      "programs.py": "f384c0907d210ec681fabd483bdc905e3d4a14590916c5c0ac095178d988f1d3",
+      "reports.py": "0d4202c5d7228da4fd15344abecea8120c1aeb1321fabdd3a38217a6e7d0d396",
+      "schemas.py": "796cfc6614c9a453b8a36e46cfc0338eac65ba8529a30a68aa3d5e3f9b6c26c8",
+      "ui.py": "bef62e4949edaf768b137d647c580120fddc4adea83fda0221109946cde8d59a",
+      "workers.py": "a468b8667d8abee373dc7df1e377b0706c6b88d32d3cfdbb67d9569a725b824f"
+    }
+  },
+  "continuation_run": "m1-live-20260915-002",
+  "development_settings": {
+    "requested": "Codex Astra Ultra",
+    "selection": "inherited unchanged; native development helpers are not research workers"
+  },
+  "engine_version": "m1-1",
+  "mode": "live",
+  "public_review": {
+    "reviewer_type": "development_model_review",
+    "scope": "Failed setup prompts and allowlisted metadata inspected; no raw CLI/account/session logs exported.",
+    "status": "reviewed"
+  },
+  "run_id": "m1-live-20260915-001",
+  "schema_version": "1.0",
+  "started_at": "2026-09-15T00:03:34+00:00",
+  "status": "failed_setup",
+  "updated_at": "2026-09-15T00:05:02+00:00",
+  "worker_settings": {
+    "authentication": "existing_chatgpt_sign_in",
+    "backend": "codex_cli",
+    "cost": null,
+    "cost_note": "Actual monetary usage is not exposed by codex exec; no API-priced estimate substituted.",
+    "internal_provider_retries": "CLI default bounded retries; exact HTTP count unknown",
+    "isolation": "fresh temporary directory and context; user config ignored; project docs suppressed; tools disabled; read-only sandbox",
+    "max_attempts_per_job": 2,
+    "model": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "timeout_seconds_per_attempt": 420
+  }
+}

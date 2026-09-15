@@ -1,0 +1,23 @@
+{
+  "attempt": 1,
+  "completed_turns": 1,
+  "duration_seconds": 72.045,
+  "error_events": 0,
+  "exit_code": 0,
+  "finished_at": "2026-09-15T00:06:18+00:00",
+  "model": "gpt-6-astra",
+  "prompt_hash": "4dd9991466fcc163e555ed3257eb4fd1892b17d92b16894c7063b35e023c7549",
+  "provider_request_count": null,
+  "provider_retry_count": null,
+  "reasoning_effort": "medium",
+  "request_hash": "7910ca11ae73255d292e1bc2766fec8f47724415e24cbf993315473426bb99ba",
+  "settings_observation": "explicit CLI invocation; provider does not return resolved model in exec JSONL",
+  "started_at": "2026-09-15T00:05:02+00:00",
+  "status": "valid",
+  "tool_item_types": [],
+  "usage": {
+    "cached_input_tokens": 0,
+    "input_tokens": 10932,
+    "output_tokens": 2426
+  }
+}

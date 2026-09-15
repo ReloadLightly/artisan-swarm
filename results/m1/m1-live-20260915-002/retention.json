@@ -1,0 +1,11 @@
+{
+  "alternatives_preserved": [
+    "centralized-v1",
+    "federated-v1",
+    "project_specific-v1"
+  ],
+  "descendant": "centralized-v1-r1",
+  "outcome": "retain",
+  "reviewer_type": "model_judgment",
+  "substantive_repair": true
+}
